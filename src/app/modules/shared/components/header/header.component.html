@@ -1,0 +1,214 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light dm-nav" [ngClass]="{'fixed-top': visibility}">
+  <div class="media">
+    <a *ngIf="defaultLang === 'th'" class="navbar-brand" id="navbarLogo" href="{{STATIC_BASE_URL}}">
+      <img src="{{DRIVEMATE_LOGO}}" alt="drivemate logo" class="NAV_LINK"/>
+    </a>
+    <a *ngIf="defaultLang === 'en'" class="navbar-brand" id="navbarLogo" href="{{STATIC_BASE_URL+'/en'}}">
+      <img src="{{DRIVEMATE_LOGO}}" alt="drivemate logo" class="NAV_LINK"/>
+    </a>
+    <a *ngIf="defaultLang === 'zh-cn'" class="navbar-brand" id="navbarLogo" href="{{STATIC_BASE_URL+'/zh-cn'}}">
+      <img src="{{DRIVEMATE_LOGO}}" alt="drivemate logo" class="NAV_LINK"/>
+    </a>
+    <div class="media-body">
+      <div class="row">
+        <div class="col-6">
+        <!-- <app-search></app-search> -->
+        </div>
+        <div class="col-6 pl-0">
+          <button class="navbar-toggler dd-user float-right SHOWHIDE" type="button" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNavDropdown" aria-label="Toggle navigation" id="btnNavbarToggler">
+          <span class="material-icons-outlined menu-icon float-left">menu</span>
+          <span class="material-icons float-left user-icon" *ngIf="!isLoggedIn">account_circle</span>
+          <span class="thumb float-left" *ngIf="isLoggedIn">
+            <img class="nav-profile-pic" [src]="user.profilePicture ? user.profilePicture : DEFAULT_PROFILE_IMAGE" />
+          </span>
+          <span class="material-icons-outlined close-icon">close</span>
+        </button>
+        <div class="d-none d-lg-block">
+          <div class="navbar-collapse collapse" id="navbarNavDropdown" [collapse]="isCollapsed">
+            <ul class="navbar-nav float-right">
+              <li class="nav-item btn-group dd-list" dropdown>
+                <a class="nav-link dropdown-toggle" id="listCar" dropdownToggle aria-controls="divListCar" [translate]="'HEADER_MENU.HOST'">
+                  <span class="span-label" [translate]="'HEADER_MENU.LIST_YOUR_CAR'"></span>
+                </a>
+                <div class="dropdown-menu" id="divListCar" aria-labelledby="listCar" *dropdownMenu>
+                  <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CAR}}" id="listAsset" [translate]="'HEADER_MENU.LIST_A_CAR'"></a>
+                  <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CAR}}" id="listAsset" [translate]="'HEADER_MENU.LIST_A_CAR'"></a>
+                  <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CARWITHDRIVER}}" [translate]="'HEADER_MENU.LIST_CAR_WITH_DRIVER'" id="listAssetDriver"></a>
+                  <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CARWITHDRIVER}}" [translate]="'HEADER_MENU.LIST_CAR_WITH_DRIVER'" id="listAssetDriver"></a>
+                  <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.AIRPORTTRANSFER}}" [translate]="'HEADER_MENU.LIST_CAR_AIRPORT_TRANSFER'" id="assetAirportTransfer"></a>
+                  <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.AIRPORTTRANSFER}}" [translate]="'HEADER_MENU.LIST_CAR_AIRPORT_TRANSFER'" id="assetAirportTransfer"></a>
+                </div>
+              </li>
+              <li class="nav-item dd-lang btn-group" dropdown>
+                <a class="nav-link dropdown-toggle" id="navbarLanguage" dropdownToggle aria-controls="divbarLanguage">
+                  <span class="material-icons-outlined d-none d-sm-none d-md-none d-lg-block d-xl-block mr-2">language</span>
+                  <span class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                    <span class="material-icons-outlined float-left mr-2">language</span>
+                    <span class="float-left" [translate]="'FOOTER_SECTION.LANGUAGE'"></span>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" id="divbarLanguage" aria-labelledby="navbarLanguage" *dropdownMenu>
+                  <a *ngFor="let item of languages|sortBy:'asc':'id'" class="dropdown-item NAV_LINK" [ngClass]="{ 'selected': language === item.code }" (click)="changeLanguage(item.code)" id="langTh"> 
+                    <span class="flag-img">
+                      <img [src]="item.code === LanguageType.ENGLISH?FLAG_IMAGE.ENGLISH:item.code === LanguageType.THAI?FLAG_IMAGE.THAI:FLAG_IMAGE.CHINESE"/>
+                    </span>
+                    {{ item.displayName }} 
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item dd-user btn-group d-none d-sm-none d-md-none d-lg-block d-xl-block" dropdown *ngIf="!isLoggedIn">
+                <a class="nav-link dropdown-toggle" id="navbarProfile" dropdownToggle aria-controls="divbarProfile">
+                  <span class="material-icons-outlined float-left">menu</span>
+                  <span class="material-icons float-left user-icon" *ngIf="!isLoggedIn">account_circle</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" id="divbarProfile" aria-labelledby="navbarProfile" *dropdownMenu>
+                  <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.SIGN_UP}}" [translate]="'HEADER_MENU.SIGN_UP'"></a>
+                  <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.SIGN_UP}}" [translate]="'HEADER_MENU.SIGN_UP'"></a>
+                </div>
+              </li>
+              <li class="nav-item dd-user btn-group d-none d-sm-none d-md-none d-lg-block d-xl-block" dropdown *ngIf="isLoggedIn">
+                <a class="nav-link dropdown-toggle" id="navbarProfile" dropdownToggle aria-controls="divbarProfile">
+                  <span class="material-icons-outlined float-left">menu</span>
+                  <span class="material-icons float-left user-icon" *ngIf="!isLoggedIn">account_circle</span>
+                  <span class="thumb float-left" *ngIf="isLoggedIn"><img class="nav-profile-pic"
+                      [src]="user.profilePicture ? user.profilePicture : DEFAULT_PROFILE_IMAGE" /></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" id="divbarProfile" aria-labelledby="navbarProfile" *dropdownMenu>
+                  <app-user-nav-items></app-user-nav-items>
+                </div>
+              </li>
+              <div _ngcontent-plo-c67="" class="dropdown-divider"></div>
+              <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none" *ngIf="!isLoggedIn">
+                  <a *ngIf="defaultLang === 'th'" id="signUp" class="nav-link NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.SIGN_UP}}" [translate]="'HEADER_MENU.SIGN_UP'"></a>
+                  <a *ngIf="defaultLang === 'en'" id="signUp" class="nav-link NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.SIGN_UP}}" [translate]="'HEADER_MENU.SIGN_UP'"></a>
+              </li>
+              <!-- <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none" *ngIf="!isLoggedIn">
+                <app-login-popup></app-login-popup>
+              </li> -->
+              <span class="d-block d-sm-block d-md-block d-lg-none d-xl-none" dropdown *ngIf="isLoggedIn">
+                <app-user-nav-items></app-user-nav-items>
+              </span>
+              <li class="nav-item dis-none">
+                <a class="nav-link" [href]="OG_TAGS.LINE" id="navbarLineMessanger"><span class="line-icon"></span></a>
+              </li>
+              <li class="nav-item dis-none">
+                <a class="nav-link" [href]="phone" id="navbarContact"><i class="fa fa-phone" aria-hidden="true"></i>{{OG_TAGS.PHONE}}</a>
+              </li>
+            </ul>
+            <!----- Drivemate Switch Navigation ------>
+            <ul class="navbar-nav float-right" *ngIf="pageSwitch">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH] | localize" [translate]="'SWITCH_MENU.DRIVEMATE_SWITCH'" id="dmSwitch"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_HOW_IT_WORKS] | localize" [translate]="'SWITCH_MENU.HOW_IT_WORKS'" id="how"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_PRICING] | localize" [translate]="'SWITCH_MENU.PRICING'" id="pricing"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_FAQ] | localize" [translate]="'SWITCH_MENU.FAQS'" id="faqs"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_REGISTER] | localize" id="getStarted">
+                  <span class="badge badge-primary pl-3 pr-3" [translate]="'SWITCH_MENU.GET_STARTED'"></span>
+                </a>
+              </li>
+              <li class="nav-item dropdown dd-lang" dropdown>
+                <a class="nav-link dropdown-toggle" href="" id="navbarLanguage" dropdownToggle (click)="false" aria-controls="ddlnavbarLanguage">
+                  {{language | uppercase}}
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="ddlnavbarLanguage" *dropdownMenu role="menu">
+                  <a *ngFor="let item of languages|sortBy:'asc':'id'" class="dropdown-item" [ngClass]="{ 'selected': language === item.code }" (click)="changeLanguage(item.code)" id="langTh">
+                    <span class="flag-img">
+                      <img [src]="item.code === LanguageType.ENGLISH?FLAG_IMAGE.ENGLISH:item.code === LanguageType.THAI?FLAG_IMAGE.THAI:FLAG_IMAGE.CHINESE"/>
+                    </span>
+                    {{ item.displayName }} 
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Responsive Menu-->
+  <div class="d-block d-lg-none">
+    <div class="navbar-collapse collapse" id="navbarNavDropdown" [collapse]="isCollapsed">
+      <ul class="navbar-nav float-right">
+        <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none" *ngIf="!isLoggedIn">
+          <a *ngIf="defaultLang === 'th'" id="signUp" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.SIGN_UP}}" [translate]="'HEADER_MENU.SIGN_UP'"></a>
+          <a *ngIf="defaultLang === 'en'" id="signUp" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.SIGN_UP}}" [translate]="'HEADER_MENU.SIGN_UP'"></a>
+        </li>
+        <li class="nav-item d-block d-sm-block d-md-block d-lg-none d-xl-none" dropdown *ngIf="isLoggedIn">
+          <app-user-nav-items></app-user-nav-items>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item dd-list">
+          <div class="list-car-menu">
+            <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CAR}}" id="listAsset" [translate]="'HEADER_MENU.LIST_A_CAR'"></a>
+            <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CAR}}" id="listAsset" [translate]="'HEADER_MENU.LIST_A_CAR'"></a>
+            <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CARWITHDRIVER}}" [translate]="'HEADER_MENU.LIST_CAR_WITH_DRIVER'" id="listAssetDriver"></a>
+            <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.CARWITHDRIVER}}" [translate]="'HEADER_MENU.LIST_CAR_WITH_DRIVER'" id="listAssetDriver"></a>
+            <a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.AIRPORTTRANSFER}}" [translate]="'HEADER_MENU.LIST_CAR_AIRPORT_TRANSFER'" id="assetAirportTransfer"></a>
+            <a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.KNOW_BEFORE_RENT+'/'+RentalCategories.AIRPORTTRANSFER}}" [translate]="'HEADER_MENU.LIST_CAR_AIRPORT_TRANSFER'" id="assetAirportTransfer"></a>
+          </div>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item dd-lang">
+          <div class="lang-menu">
+            <a *ngFor="let item of languages|sortBy:'asc':'id'" class="dropdown-item NAV_LINK" [ngClass]="{ 'selected': language === item.code }" (click)="changeLanguage(item.code)" id="langTh"> 
+              <span class="flag-img">
+                <img [src]="item.code === LanguageType.ENGLISH?FLAG_IMAGE.ENGLISH:item.code === LanguageType.THAI?FLAG_IMAGE.THAI:FLAG_IMAGE.CHINESE"/>
+              </span>
+              {{ item.displayName }} 
+              <span class="selected-icon material-icons-outlined">done</span> 
+            </a>
+          </div>
+        </li>
+        <li class="nav-item d-block d-lg-none" *ngIf="isLoggedIn">
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item NAV_LINK" (click)="logoutClicked()" id="signOut" [translate]="'HEADER_MENU.LOGOUT'"></a>
+        </li>
+      </ul>
+      <!----- Drivemate Switch Navigation ------>
+      <ul class="navbar-nav float-right" *ngIf="pageSwitch">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH] | localize" [translate]="'SWITCH_MENU.DRIVEMATE_SWITCH'" id="dmSwitch"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_HOW_IT_WORKS] | localize" [translate]="'SWITCH_MENU.HOW_IT_WORKS'" id="how"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_PRICING] | localize" [translate]="'SWITCH_MENU.PRICING'" id="pricing"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_FAQ] | localize" [translate]="'SWITCH_MENU.FAQS'" id="faqs"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[NAVIGATION.SWITCH_REGISTER] | localize" id="getStarted">
+            <span class="badge badge-primary pl-3 pr-3" [translate]="'SWITCH_MENU.GET_STARTED'"></span>
+          </a>
+        </li>
+        <li class="nav-item dropdown dd-lang" dropdown>
+          <a class="nav-link dropdown-toggle" href="" id="navbarLanguage" dropdownToggle (click)="false" aria-controls="ddlnavbarLanguage">
+            {{language | uppercase}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="ddlnavbarLanguage" *dropdownMenu role="menu">
+            <a *ngFor="let item of languages|sortBy:'asc':'id'" class="dropdown-item" [ngClass]="{ 'selected': language === item.code }" (click)="changeLanguage(item.code)" id="langTh">
+              <span class="flag-img">
+                <img [src]="item.code === LanguageType.ENGLISH?FLAG_IMAGE.ENGLISH:item.code === LanguageType.THAI?FLAG_IMAGE.THAI:FLAG_IMAGE.CHINESE"/>
+              </span>
+              {{ item.displayName }} 
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-bg collapse" id="navbarNavDropdown" [collapse]="isCollapsed"></div>

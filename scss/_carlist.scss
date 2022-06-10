@@ -1,0 +1,1170 @@
+
+.condition {
+	a {
+		text-decoration: underline;
+		&:focus {
+			border: none;
+			outline: 0;
+		}
+	}
+	.accept-condition {
+		top: 2px;
+		cursor: default !important;
+	}
+}
+.modal-condition-gps {
+	.modal-dialog {
+		width: 750px;
+	}
+	.modal-body {
+		font-size: 12px;
+	}
+	.block {
+		display: block;
+	}
+	.name-commany {
+		font-size: 14px;
+		color: #000;
+		padding-top: 4px;
+	}
+	.address {
+		padding: 8px 0;
+	}
+	.announcement {
+		font-size: 18px;
+		color: #000;
+		padding: 8px 0;
+	}
+	.announcement-title {
+		padding-bottom: 4px;
+	}
+	.list-g-driving {
+		li {
+			padding: 0px;
+			border: none;
+			&:last-child {
+				padding: 0px;
+			}
+		}
+	}
+}
+.group-calendar{
+    margin-bottom: 25px;
+}
+input.form-control {
+	border-style: solid;
+	border-width: 1px;
+}
+select.form-control {
+	border-style: solid;
+	border-width: 1px;
+	&:focus {
+		border-style: solid;
+		border-width: 1px;
+	}
+}
+.input-group-addon {
+	border-style: solid;
+	border-width: 1px;
+}
+.form-control {
+	border-style: solid;
+	border-width: 1px;
+}
+.input-both {
+	width: 49%;
+	.w-95 {
+		width: 95%;
+	}
+	.w-auto {
+		width: auto;
+	}
+}
+.country-select{
+    width: 100%;
+}
+.suggess-price{
+    margin-bottom: 25px;
+}
+.gp-both {
+	display: table;
+	width: 100%;
+	.left {
+		display: table-cell;
+		width: 55%;
+		vertical-align: middle;
+	}
+	.right {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+		text-align: right;
+		.input-discount {
+			text-align: right;
+			font-size: 14px;
+			cursor: default;
+			border: none;
+			background: transparent;
+		}
+		.type-discount {
+			border: none;
+			background: transparent;
+			padding-right: 0px;
+		}
+		.type-discount.no-pad-right {
+			padding-right: 12px;
+		}
+	}
+}
+/* delivery location */
+ul.delivery {
+	li.no-border {
+		border: none;
+	}
+	li {
+		.left {
+			display: inline-block;
+			margin-bottom: 8px;
+		}
+		.right {
+			display: inline-block;
+			margin-bottom: 8px;
+		}
+		.dis-table {
+			display: table;
+		}
+	}
+}
+.box-header {
+	padding: 25px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	.title {
+		margin-bottom: 15px;
+		font-size: 20px;
+		letter-spacing: .5px;
+	}
+	.lead-sub {
+		display: block;
+		margin-bottom: 15px;
+		font-size: 14px;
+	}
+}
+.list-g-driving {
+	text-align: left;
+	display: block;
+	padding-left: 0;
+	list-style-type: none;
+	padding: 0 27px;
+	.location {
+		font-weight: 600;
+	}
+	li {
+		border: none;
+		padding: 15px 0;
+		display: inline-block;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		width: 100%;
+		&:last-child {
+			border-bottom: none;
+			padding: 15px 0 0;
+		}
+		.labels {
+			text-align: left;
+			display: inline-table;
+			vertical-align: top;
+			.for-checkbox {
+				display: table-cell;
+				vertical-align: top;
+				padding-right: 15px;
+			}
+		}
+		.labels.indent {
+			padding-left: 8px;
+		}
+	}
+}
+.list-g-driving.owner {
+	li {
+		&:first-child {
+			border-top-style: solid;
+			border-top-width: 1px;
+		}
+	}
+}
+.gp-icon {
+	display: inline-block;
+	height: 26px;
+	width: 25px;
+	padding: 0 8px;
+	position: relative;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	i.i-check {
+		font-size: 9px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.gp-icon.pos-abs {
+	position: absolute;
+	bottom: 0px;
+	right: -6px;
+	height: 16px;
+	width: 16px;
+	display: none;
+	i.i-check {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.list-g-driving {
+	li {
+		.labels {
+			.sub_additional {
+				font-size: 12px;
+			}
+		}
+		.value {
+			display: inline-block;
+			float: right;
+			font-weight: 500;
+		}
+	}
+}
+.gp-icon-location {
+	position: relative;
+	.input-location {
+		padding: 6px 31px !important;
+	}
+	.icon-location {
+		position: absolute;
+		width: 14px;
+		top: 7px;
+		left: 9px;
+	}
+}
+.car_colors {
+	.card {
+		width: 20%;
+		display: inline-block;
+		float: left;
+		padding: 0 15px;
+		margin-bottom: 15px;
+		border: 0;
+	}
+	.box-color {
+		width: 100%;
+		display: inline-block;
+		border: 1px solid #e5e5e5;
+		padding: 8px;
+		text-align: left;
+		cursor: pointer;
+		.color-choice {
+			padding-right: 8px;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			margin-right: 5px;
+			border-style: solid;
+			border-width: 1px;
+		}
+		.text-color {
+			line-height: 18px;
+			display: inline-block;
+			vertical-align: text-top;
+		}
+	}
+	.box-color.active {
+		border-style: solid;
+		border-width: 1px;
+	}
+}
+/* car type option list */
+.car-option-list {
+	display: table;
+	width: 100%;
+	margin: 0;
+	li {
+		float: left;
+		.ficon {
+			margin: 8px auto 8px auto;
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: url(https://dmprodcdn.blob.core.windows.net/front-office/assets/images/car_features.png) no-repeat 0 0 / 900px;
+			position: relative;
+		}
+	}
+	.car-type {
+		display: block;
+		cursor: pointer;
+		height: 100px;
+		label {
+			display: block;
+			cursor: pointer;
+			margin: 0;
+			font-size: 12px;
+			line-height: 14px;
+			text-align: center;
+			font-weight: 500;
+		}
+		.icon {
+			img {
+				height: 48px;
+				width: 48px;
+				display: block;
+				margin: auto;
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+			}
+		}
+		&:hover {
+			.icon {
+				img {
+					-webkit-filter: grayscale(0%);
+					filter: grayscale(0%);
+				}
+				background-position: 0 -62px;
+			}
+		}
+	}
+	.icon {
+		margin: 8px auto 8px auto;
+		display: block;
+		width: 60px;
+		height: 45px;
+		position: relative;
+	}
+	.car-typee {
+		.icon {
+			background-position: 0 0;
+		}
+	}
+	.car-type.active {
+		.gp-icon {
+			display: inline-block;
+		}
+	}
+	.car-type.selected {
+		.icon {
+			background-position: 0 -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: 0 -31px;
+			}
+		}
+	}
+	.car-type.active.car-type {
+		.icon {
+			background-position: 0 -62px;
+		}
+	}
+	.type-facet-Campervan {
+		.icon {
+			background-position: -60px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -60px -62px;
+			}
+		}
+	}
+	.type-facet-Campervan.selected {
+		.icon {
+			background-position: -60px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -60px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Campervan {
+		.icon {
+			background-position: -60px -62px;
+		}
+	}
+	.type-facet-City {
+		.icon {
+			background-position: -120px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -120px -62px;
+			}
+		}
+	}
+	.type-facet-City.selected {
+		.icon {
+			background-position: -120px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -120px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-City {
+		.icon {
+			background-position: -120px -62px;
+		}
+	}
+	.type-facet-Convertible {
+		.icon {
+			background-position: -180px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -180px -62px;
+			}
+		}
+	}
+	.type-facet-Convertible.selected {
+		.icon {
+			background-position: -180px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -180px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Convertible {
+		.icon {
+			background-position: -180px -62px;
+		}
+	}
+	.type-facet-Coupe {
+		.icon {
+			background-position: -240px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -240px -62px;
+			}
+		}
+	}
+	.type-facet-Coupe.selected {
+		.icon {
+			background-position: -240px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -240px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Coupe {
+		.icon {
+			background-position: -240px -62px;
+		}
+	}
+	.type-facet-SUVs {
+		.icon {
+			background-position: -300px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -300px -62px;
+			}
+		}
+	}
+	.type-facet-SUVs.selected {
+		.icon {
+			background-position: -300px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -300px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-SUVs {
+		.icon {
+			background-position: -300px -62px;
+		}
+	}
+	.type-facet-Sedan {
+		.icon {
+			background-position: -360px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -360px -62px;
+			}
+		}
+	}
+	.type-facet-Sedan.selected {
+		.icon {
+			background-position: -360px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -360px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Sedan {
+		.icon {
+			background-position: -360px -62px;
+		}
+	}
+	.type-facet-Fourwheeler {
+		.icon {
+			background-position: -420px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -420px -62px;
+			}
+		}
+	}
+	.type-facet-Fourwheeler.selected {
+		.icon {
+			background-position: -420px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -420px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Fourwheeler {
+		.icon {
+			background-position: -420px -62px;
+		}
+	}
+	.type-facet-Truck {
+		.icon {
+			background-position: -480px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -480px -62px;
+			}
+		}
+	}
+	.type-facet-Truck.selected {
+		.icon {
+			background-position: -480px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -480px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Truck {
+		.icon {
+			background-position: -480px -62px;
+		}
+	}
+	.type-facet-Van {
+		.icon {
+			background-position: -540px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -540px -62px;
+			}
+		}
+	}
+	.type-facet-Van.selected {
+		.icon {
+			background-position: -540px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -540px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Van {
+		.icon {
+			background-position: -540px -62px;
+		}
+	}
+	.type-facet-Utility {
+		.icon {
+			background-position: -480px 0;
+		}
+		&:hover {
+			.icon {
+				background-position: -480px -62px;
+			}
+		}
+	}
+	.type-facet-Utility.selected {
+		.icon {
+			background-position: -480px -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: -480px -31px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Utility {
+		.icon {
+			background-position: -480px -62px;
+		}
+	}
+	.type-facet-Other.selected {
+		.icon {
+			background-position: 0 -31px;
+		}
+		&:hover {
+			.icon {
+				background-position: 0 -31px;
+			}
+		}
+	}
+	.type-facet-Other {
+		&:hover {
+			.icon {
+				background-position: 0 -62px;
+			}
+		}
+	}
+	.car-type.active.type-facet-Other {
+		.icon {
+			background-position: 0 -62px;
+		}
+	}
+	.car-feature {
+		display: block;
+		cursor: pointer;
+		height: 100px;
+		label {
+			display: block;
+			cursor: pointer;
+			padding: 6px 0 8px 0;
+			font-size: 12px;
+			line-height: 14px;
+			text-align: center;
+			font-weight: 500;
+			letter-spacing: .4px;
+			margin: 0px;
+		}
+	}
+	.feature-list {
+		height: 90px;
+	}
+	.feature-facet-1 {
+		.ficon {
+			background-position: 0 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: 0 -50px;
+			}
+		}
+	}
+	.active.feature-facet-1 {
+		.ficon {
+			background-position: 0 -50px;
+		}
+	}
+	.feature-facet-1.selected {
+		.ficon {
+			background-position: 0 -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: 0 -100px;
+			}
+		}
+	}
+	.feature-facet-2 {
+		.ficon {
+			background-position: -50px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -50px -50px;
+			}
+		}
+	}
+	.active.feature-facet-2 {
+		.ficon {
+			background-position: -50px -50px;
+		}
+	}
+	.feature-facet-2.selected {
+		.ficon {
+			background-position: -50px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -50px -100px;
+			}
+		}
+	}
+	.feature-facet-3 {
+		.ficon {
+			background-position: -100px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -100px -50px;
+			}
+		}
+	}
+	.active.feature-facet-3 {
+		.ficon {
+			background-position: -100px -50px;
+		}
+	}
+	.feature-facet-3.selected {
+		.ficon {
+			background-position: -100px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -100px -100px;
+			}
+		}
+	}
+	.feature-facet-4 {
+		.ficon {
+			background-position: -150px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -150px -50px;
+			}
+		}
+	}
+	.active.feature-facet-4 {
+		.ficon {
+			background-position: -150px -50px;
+		}
+	}
+	.feature-facet-4.selected {
+		.ficon {
+			background-position: -150px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -150px -100px;
+			}
+		}
+	}
+	.feature-facet-5 {
+		.ficon {
+			background-position: -200px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -200px -50px;
+			}
+		}
+	}
+	.active.feature-facet-5 {
+		.ficon {
+			background-position: -200px -50px;
+		}
+	}
+	.feature-facet-5.selected {
+		.ficon {
+			background-position: -200px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -200px -100px;
+			}
+		}
+	}
+	.feature-facet-6 {
+		.ficon {
+			background-position: -250px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -250px -50px;
+			}
+		}
+	}
+	.active.feature-facet-6 {
+		.ficon {
+			background-position: -250px -50px;
+		}
+	}
+	.feature-facet-6.selected {
+		.ficon {
+			background-position: -250px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -250px -100px;
+			}
+		}
+	}
+	.feature-facet-7 {
+		.ficon {
+			background-position: -300px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -300px -50px;
+			}
+		}
+	}
+	.active.feature-facet-7 {
+		.ficon {
+			background-position: -300px -50px;
+		}
+	}
+	.feature-facet-7.selected {
+		.ficon {
+			background-position: -300px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -300px -100px;
+			}
+		}
+	}
+	.feature-facet-8 {
+		.ficon {
+			background-position: -350px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -350px -50px;
+			}
+		}
+	}
+	.active.feature-facet-8 {
+		.ficon {
+			background-position: -350px -50px;
+		}
+	}
+	.feature-facet-8.selected {
+		.ficon {
+			background-position: -350px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -350px -100px;
+			}
+		}
+	}
+	.feature-facet-9 {
+		.ficon {
+			background-position: -400px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -400px -50px;
+			}
+		}
+	}
+	.active.feature-facet-9 {
+		.ficon {
+			background-position: -400px -50px;
+		}
+	}
+	.feature-facet-9.selected {
+		.ficon {
+			background-position: -400px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -400px -100px;
+			}
+		}
+	}
+	.feature-facet-10 {
+		.ficon {
+			background-position: -450px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -450px -50px;
+			}
+		}
+	}
+	.active.feature-facet-10 {
+		.ficon {
+			background-position: -450px -50px;
+		}
+	}
+	.feature-facet-10.selected {
+		.ficon {
+			background-position: -450px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -450px -100px;
+			}
+		}
+	}
+	.feature-facet-11 {
+		.ficon {
+			background-position: -500px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -500px -50px;
+			}
+		}
+	}
+	.active.feature-facet-11 {
+		.ficon {
+			background-position: -500px -50px;
+		}
+	}
+	.feature-facet-11.selected {
+		.ficon {
+			background-position: -500px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -500px -100px;
+			}
+		}
+	}
+	.feature-facet-15 {
+		.ficon {
+			background-position: -550px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -550px -50px;
+			}
+		}
+	}
+	.active.feature-facet-15 {
+		.ficon {
+			background-position: -550px -50px;
+		}
+	}
+	.feature-facet-15.selected {
+		.ficon {
+			background-position: -550px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -550px -100px;
+			}
+		}
+	}
+	.feature-facet-16 {
+		.ficon {
+			background-position: -600px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -600px -50px;
+			}
+		}
+	}
+	.active.feature-facet-16 {
+		.ficon {
+			background-position: -600px -50px;
+		}
+	}
+	.feature-facet-16.selected {
+		.ficon {
+			background-position: -600px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -600px -100px;
+			}
+		}
+	}
+	.feature-facet-17 {
+		.ficon {
+			background-position: -650px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -650px -50px;
+			}
+		}
+	}
+	.active.feature-facet-17 {
+		.ficon {
+			background-position: -650px -50px;
+		}
+	}
+	.feature-facet-17.selected {
+		.ficon {
+			background-position: -650px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -650px -100px;
+			}
+		}
+	}
+	.feature-facet-18 {
+		.ficon {
+			background-position: -700px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -700px -50px;
+			}
+		}
+	}
+	.active.feature-facet-18 {
+		.ficon {
+			background-position: -700px -50px;
+		}
+	}
+	.feature-facet-18.selected {
+		.ficon {
+			background-position: -700px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -700px -100px;
+			}
+		}
+	}
+	.feature-facet-19 {
+		.ficon {
+			background-position: -750px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -750px -50px;
+			}
+		}
+	}
+	.active.feature-facet-19 {
+		.ficon {
+			background-position: -750px -50px;
+		}
+	}
+	.feature-facet-19.selected {
+		.ficon {
+			background-position: -750px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -750px -100px;
+			}
+		}
+	}
+	.feature-facet-21 {
+		.ficon {
+			background-position: -800px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -800px -50px;
+			}
+		}
+	}
+	.active.feature-facet-21 {
+		.ficon {
+			background-position: -800px -50px;
+		}
+	}
+	.feature-facet-21.selected {
+		.ficon {
+			background-position: -800px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -800px -100px;
+			}
+		}
+	}
+	.feature-facet-20 {
+		.ficon {
+			background-position: -850px 0;
+		}
+		&:hover {
+			.ficon {
+				background-position: -850px -50px;
+			}
+		}
+	}
+	.active.feature-facet-20 {
+		.ficon {
+			background-position: -850px -50px;
+		}
+	}
+	.feature-facet-20.selected {
+		.ficon {
+			background-position: -850px -100px;
+		}
+		&:hover {
+			.ficon {
+				background-position: -850px -100px;
+			}
+		}
+	}
+}
+.summary-list-car {
+	margin-bottom: 30px;
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+.table-summary {
+	.columns-imagetd {
+		width: 40%;
+	}
+	.columns-image-icon {
+		td {
+			width: 32px;
+		}
+	}
+	.columns-image {
+		.blog-img {
+			img {
+				min-width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	.img-icon {
+		width: 32px;
+		margin: 25px auto;
+	}
+	.img-icon-marker {
+		width: auto;
+		height: 30px;
+	}
+	margin: 0px;
+	.font-normal {
+		margin-bottom: 8px;
+	}
+	tbody {
+		tr {
+			td {
+				vertical-align: middle;
+				border: none;
+			}
+		}
+	}
+}
+.summary-blog-img {
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 50%;
+	img {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}

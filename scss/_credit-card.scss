@@ -1,0 +1,1170 @@
+$background_color_1 : #108168;
+$background_color_2 : #FF6600;
+$background_color_3 : #86B8CF;
+$background_color_4 : #191278;
+$background_color_5 : #0061A8;
+$background_color_6 : #0B2C5F;
+$background_color_9 : #0055C7;
+$background_color_10: #6F6969;
+$background_color_11: #444;
+$background_color_14: rgba($black, 0.5);
+$border_color_1     : transparent $primary transparent transparent;
+$border_color_2     : $primary transparent transparent transparent;
+$border_color_3     : transparent transparent $primary transparent;
+
+.credit-card.credit-card-safari.credit-card-identified {
+	.credit-card-front {
+		&:before {
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), linear-gradient(-25deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), linear-gradient(-25deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+		}
+	}
+}
+
+.credit-card.credit-card-ie-10.credit-card-flipped {
+	-webkit-transform: 0deg;
+	-moz-transform   : 0deg;
+	-ms-transform    : 0deg;
+	-o-transform     : 0deg;
+	transform        : 0deg;
+
+	.credit-card-front {
+		-webkit-transform: rotateY(0deg);
+		-moz-transform   : rotateY(0deg);
+		-ms-transform    : rotateY(0deg);
+		-o-transform     : rotateY(0deg);
+		transform        : rotateY(0deg);
+	}
+
+	.credit-card-back {
+		-webkit-transform: rotateY(0deg);
+		-moz-transform   : rotateY(0deg);
+		-ms-transform    : rotateY(0deg);
+		-o-transform     : rotateY(0deg);
+		transform        : rotateY(0deg);
+
+		&:after {
+			left: 18%;
+		}
+
+		.credit-card-cvc {
+			-webkit-transform: rotateY(180deg);
+			-moz-transform   : rotateY(180deg);
+			-ms-transform    : rotateY(180deg);
+			-o-transform     : rotateY(180deg);
+			transform        : rotateY(180deg);
+			left             : 5%;
+		}
+
+		.credit-card-shiny {
+			left: 84%;
+
+			&:after {
+				left             : -480%;
+				-webkit-transform: rotateY(180deg);
+				-moz-transform   : rotateY(180deg);
+				-ms-transform    : rotateY(180deg);
+				-o-transform     : rotateY(180deg);
+				transform        : rotateY(180deg);
+			}
+		}
+	}
+}
+
+.credit-card.credit-card-ie-11.credit-card-flipped {
+	-webkit-transform: 0deg;
+	-moz-transform   : 0deg;
+	-ms-transform    : 0deg;
+	-o-transform     : 0deg;
+	transform        : 0deg;
+
+	.credit-card-front {
+		-webkit-transform: rotateY(0deg);
+		-moz-transform   : rotateY(0deg);
+		-ms-transform    : rotateY(0deg);
+		-o-transform     : rotateY(0deg);
+		transform        : rotateY(0deg);
+	}
+
+	.credit-card-back {
+		-webkit-transform: rotateY(0deg);
+		-moz-transform   : rotateY(0deg);
+		-ms-transform    : rotateY(0deg);
+		-o-transform     : rotateY(0deg);
+		transform        : rotateY(0deg);
+
+		&:after {
+			left: 18%;
+		}
+
+		.credit-card-cvc {
+			-webkit-transform: rotateY(180deg);
+			-moz-transform   : rotateY(180deg);
+			-ms-transform    : rotateY(180deg);
+			-o-transform     : rotateY(180deg);
+			transform        : rotateY(180deg);
+			left             : 5%;
+		}
+
+		.credit-card-shiny {
+			left: 84%;
+
+			&:after {
+				left             : -480%;
+				-webkit-transform: rotateY(180deg);
+				-moz-transform   : rotateY(180deg);
+				-ms-transform    : rotateY(180deg);
+				-o-transform     : rotateY(180deg);
+				transform        : rotateY(180deg);
+			}
+		}
+	}
+}
+
+.credit-card.credit-card-ie-10.credit-card-amex {
+	.credit-card-back {
+		display: none;
+	}
+}
+
+.credit-card.credit-card-ie-11.credit-card-amex {
+	.credit-card-back {
+		display: none;
+	}
+}
+
+.credit-card-logo {
+	height    : 36px;
+	width     : 60px;
+	font-style: italic;
+	box-sizing: border-box;
+
+	&:before {
+		box-sizing: border-box;
+	}
+
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+.credit-card-logo.credit-card-amex {
+	text-transform  : uppercase;
+	font-size       : 4px;
+	font-weight     : bold;
+	color           : $white;
+	background-image: repeating-radial-gradient(circle at center, $white 1px, #999 2px);
+	background-image: repeating-radial-gradient(circle at center, $white 1px, #999 2px);
+	border          : 1px solid #EEE;
+
+	&:before {
+		width       : 28px;
+		display     : block;
+		position    : absolute;
+		left        : 16px;
+		height      : 28px;
+		content     : "american";
+		top         : 3px;
+		text-align  : left;
+		padding-left: 2px;
+		padding-top : 11px;
+		background  : #267AC3;
+	}
+
+	&:after {
+		width        : 28px;
+		display      : block;
+		position     : absolute;
+		left         : 16px;
+		content      : "express";
+		bottom       : 11px;
+		text-align   : right;
+		padding-right: 2px;
+	}
+}
+
+.credit-card.credit-card-amex.credit-card-flipped {
+	-webkit-transform: none;
+	-moz-transform   : none;
+	-ms-transform    : none;
+	-o-transform     : none;
+	transform        : none;
+}
+
+.credit-card.credit-card-amex.credit-card-identified {
+	.credit-card-front {
+		&:before {
+			background-color: $background_color_1;
+		}
+
+		.credit-card-logo.credit-card-amex {
+			opacity: 1;
+		}
+
+		.credit-card-cvc {
+			visibility: visible;
+		}
+
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-color: $background_color_1;
+		}
+	}
+}
+
+.credit-card-logo.credit-card-discover {
+	background    : #FF6600;
+	color         : $black;
+	text-transform: uppercase;
+	font-style    : normal;
+	font-weight   : bold;
+	font-size     : 10px;
+	text-align    : center;
+	overflow      : hidden;
+	z-index       : 1;
+	padding-top   : 9px;
+	letter-spacing: .03em;
+	border        : 1px solid #EEE;
+
+	&:before {
+		content      : " ";
+		display      : block;
+		position     : absolute;
+		background   : $white;
+		width        : 200px;
+		height       : 200px;
+		border-radius: 200px;
+		bottom       : -5%;
+		right        : -80%;
+		z-index      : -1;
+	}
+
+	&:after {
+		content         : " ";
+		display         : block;
+		position        : absolute;
+		width           : 8px;
+		height          : 8px;
+		border-radius   : 4px;
+		top             : 10px;
+		left            : 27px;
+		background-color: $background_color_2;
+		background-image: -webkit-radial-gradient(#FF6600, $white);
+		background-image: radial-gradient(#FF6600, $white);
+		content         : "network";
+		font-size       : 4px;
+		line-height     : 24px;
+		text-indent     : -7px;
+	}
+}
+
+.credit-card {
+	.credit-card-front {
+		.credit-card-logo.credit-card-discover {
+			right: 12%;
+			top  : 18%;
+		}
+
+		-webkit-backface-visibility: hidden;
+		backface-visibility        : hidden;
+		-webkit-transform-style    : preserve-3d;
+		-moz-transform-style       : preserve-3d;
+		-ms-transform-style        : preserve-3d;
+		-o-transform-style         : preserve-3d;
+		transform-style            : preserve-3d;
+		-webkit-transition         : all 400ms linear;
+		-moz-transition            : all 400ms linear;
+		transition                 : all 400ms linear;
+		width                      : 100%;
+		height                     : 100%;
+		position                   : absolute;
+		top                        : 0;
+		left                       : 0;
+		overflow                   : hidden;
+		border-radius              : 10px;
+		background                 : #DDD;
+
+		&:before {
+			content           : " ";
+			display           : block;
+			position          : absolute;
+			width             : 100%;
+			height            : 100%;
+			top               : 0;
+			left              : 0;
+			opacity           : 0;
+			border-radius     : 10px;
+			-webkit-transition: all 400ms ease;
+			-moz-transition   : all 400ms ease;
+			transition        : all 400ms ease;
+		}
+
+		&:after {
+			content: " ";
+			display: block;
+		}
+
+		.credit-card-display {
+			color             : $white;
+			font-weight       : normal;
+			opacity           : 0.5;
+			-webkit-transition: opacity 400ms linear;
+			-moz-transition   : opacity 400ms linear;
+			transition        : opacity 400ms linear;
+		}
+
+		.credit-card-display.credit-card-focused {
+			opacity    : 1;
+			font-weight: 700;
+		}
+
+		.credit-card-cvc {
+			font-family: "Open Sans", sans-serif;
+			font-size  : 14px;
+		}
+
+		.credit-card-shiny {
+			width        : 50px;
+			height       : 35px;
+			border-radius: 5px;
+			background   : $defaultGrey;
+			position     : relative;
+
+			&:before {
+				content                   : " ";
+				display                   : block;
+				width                     : 70%;
+				height                    : 60%;
+				border-top-right-radius   : 5px;
+				border-bottom-right-radius: 5px;
+				background                : #d9d9d9;
+				position                  : absolute;
+				top                       : 20%;
+			}
+		}
+
+		.credit-card-logo {
+			position          : absolute;
+			opacity           : 0;
+			right             : 5%;
+			top               : 8%;
+			-webkit-transition: 400ms;
+			-moz-transition   : 400ms;
+			transition        : 400ms;
+		}
+
+		.credit-card-lower {
+			width   : 80%;
+			position: absolute;
+			left    : 10%;
+			bottom  : 30px;
+
+			.credit-card-cvc {
+				visibility: hidden;
+				float     : right;
+				position  : relative;
+				bottom    : 5px;
+			}
+
+			.credit-card-number {
+				font-family  : "Open Sans", sans-serif;
+				font-size    : 24px;
+				clear        : both;
+				margin-bottom: 30px;
+			}
+
+			.credit-card-expiry {
+				font-family   : "Open Sans", sans-serif;
+				letter-spacing: 0em;
+				position      : relative;
+				float         : right;
+				width         : 25%;
+
+				&:before {
+					font-family   : "Open Sans", sans-serif;
+					font-weight   : bold;
+					font-size     : 7px;
+					white-space   : pre;
+					display       : block;
+					opacity       : .5;
+					content       : attr(data-before);
+					margin-bottom : 2px;
+					font-size     : 7px;
+					text-transform: uppercase;
+				}
+
+				&:after {
+					font-family : "Open Sans", sans-serif;
+					font-weight : bold;
+					font-size   : 7px;
+					white-space : pre;
+					display     : block;
+					opacity     : .5;
+					position    : absolute;
+					content     : attr(data-after);
+					text-align  : right;
+					right       : 100%;
+					margin-right: 5px;
+					margin-top  : 2px;
+					bottom      : 0;
+				}
+			}
+
+			.credit-card-name {
+				text-transform    : uppercase;
+				font-family       : "Open Sans", sans-serif;
+				font-size         : 20px;
+				max-height        : 45px;
+				position          : absolute;
+				bottom            : 0;
+				width             : 190px;
+				display           : -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: horizontal;
+				overflow          : hidden;
+				text-overflow     : ellipsis;
+			}
+		}
+	}
+
+	font-family            : "Open Sans", sans-serif;
+	line-height            : 1;
+	position               : relative;
+	width                  : 100%;
+	height                 : 100%;
+	min-width              : 315px;
+	border-radius          : 10px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style   : preserve-3d;
+	-ms-transform-style    : preserve-3d;
+	-o-transform-style     : preserve-3d;
+	transform-style        : preserve-3d;
+	-webkit-transition     : all 400ms linear;
+	-moz-transition        : all 400ms linear;
+	transition             : all 400ms linear;
+
+	>* {
+		-moz-box-sizing   : border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing        : border-box;
+		font-family       : "Open Sans", sans-serif;
+
+		&:before {
+			-moz-box-sizing   : border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing        : border-box;
+			font-family       : "Open Sans", sans-serif;
+		}
+
+		&:after {
+			-moz-box-sizing   : border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing        : border-box;
+			font-family       : "Open Sans", sans-serif;
+		}
+	}
+
+	.credit-card-back {
+		-webkit-backface-visibility: hidden;
+		backface-visibility        : hidden;
+		-webkit-transform-style    : preserve-3d;
+		-moz-transform-style       : preserve-3d;
+		-ms-transform-style        : preserve-3d;
+		-o-transform-style         : preserve-3d;
+		transform-style            : preserve-3d;
+		-webkit-transition         : all 400ms linear;
+		-moz-transition            : all 400ms linear;
+		transition                 : all 400ms linear;
+		width                      : 100%;
+		height                     : 100%;
+		position                   : absolute;
+		top                        : 0;
+		left                       : 0;
+		overflow                   : hidden;
+		border-radius              : 10px;
+		background                 : #DDD;
+		-webkit-transform          : rotateY(180deg);
+		-moz-transform             : rotateY(180deg);
+		-ms-transform              : rotateY(180deg);
+		-o-transform               : rotateY(180deg);
+		transform                  : rotateY(180deg);
+
+		&:before {
+			content           : " ";
+			display           : block;
+			position          : absolute;
+			width             : 100%;
+			height            : 100%;
+			top               : 0;
+			left              : 0;
+			opacity           : 0;
+			border-radius     : 10px;
+			-webkit-transition: all 400ms ease;
+			-moz-transition   : all 400ms ease;
+			transition        : all 400ms ease;
+		}
+
+		&:after {
+			content         : " ";
+			display         : block;
+			content         : " ";
+			display         : block;
+			background-color: $white;
+			background-image: -webkit-linear-gradient($white, $white);
+			background-image: linear-gradient($white, $white);
+			width           : 80%;
+			height          : 16%;
+			position        : absolute;
+			top             : 40%;
+			left            : 2%;
+		}
+
+		.credit-card-display {
+			color             : $white;
+			font-weight       : normal;
+			opacity           : 0.5;
+			-webkit-transition: opacity 400ms linear;
+			-moz-transition   : opacity 400ms linear;
+			transition        : opacity 400ms linear;
+		}
+
+		.credit-card-display.credit-card-focused {
+			opacity    : 1;
+			font-weight: 700;
+		}
+
+		.credit-card-cvc {
+			font-family             : "Open Sans", sans-serif;
+			font-size               : 14px;
+			position                : absolute;
+			top                     : 40%;
+			left                    : 85%;
+			-webkit-transition-delay: 600ms;
+			-moz-transition-delay   : 600ms;
+			transition-delay        : 600ms;
+		}
+
+		.credit-card-shiny {
+			width        : 50px;
+			height       : 35px;
+			border-radius: 5px;
+			background   : $defaultGrey;
+			position     : relative;
+			position     : absolute;
+			top          : 66%;
+			left         : 2%;
+
+			&:before {
+				content                   : " ";
+				display                   : block;
+				width                     : 70%;
+				height                    : 60%;
+				border-top-right-radius   : 5px;
+				border-bottom-right-radius: 5px;
+				background                : #d9d9d9;
+				position                  : absolute;
+				top                       : 20%;
+			}
+
+			&:after {
+				content  : "This card has been issued by Jesse Pollak and is licensed for anyone to use anywhere for free.AIt comes with no warranty.A For support issues, please visit: github.com/jessepollak/card.";
+				position : absolute;
+				left     : 120%;
+				top      : 5%;
+				color    : $white;
+				font-size: 7px;
+				width    : 230px;
+				opacity  : .5;
+			}
+		}
+
+		.credit-card-bar {
+			background-color: $background_color_11;
+			background-image: -webkit-linear-gradient(#444, #333);
+			background-image: linear-gradient(#444, #333);
+			width           : 100%;
+			height          : 20%;
+			position        : absolute;
+			top             : 10%;
+		}
+	}
+}
+
+.credit-card.credit-card-discover.credit-card-identified {
+	.credit-card-front {
+		&:before {
+			background-color: $background_color_3;
+		}
+
+		&:after {
+			-webkit-transition: 400ms;
+			-moz-transition   : 400ms;
+			transition        : 400ms;
+			content           : " ";
+			display           : block;
+			background-color  : $background_color_2;
+			background-image  : -webkit-linear-gradient(#FF6600, #ffa366, #FF6600);
+			background-image  : linear-gradient(#FF6600, #ffa366, #FF6600);
+			height            : 50px;
+			width             : 50px;
+			border-radius     : 25px;
+			position          : absolute;
+			left              : 100%;
+			top               : 15%;
+			margin-left       : -25px;
+			box-shadow        : inset 1px 1px 3px 1px rgba($black, 0.5);
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-color: $background_color_3;
+		}
+	}
+
+	.credit-card-logo.credit-card-discover {
+		opacity: 1;
+	}
+}
+
+.credit-card-logo.credit-card-visa {
+	background-image    : url(https://dmprodcdn.blob.core.windows.net/front-office/assets/images/visa.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-transform: uppercase;
+	color         : $white;
+	text-align    : center;
+	font-weight   : bold;
+	font-size     : 26px;
+	line-height: 36px;
+
+	&:before {
+		content   : " ";
+		display   : none;
+		width     : 100%;
+		height    : 25%;
+		background: #1A1876;
+	}
+
+	&:after {
+		content   : " ";
+		display   : none;
+		width     : 100%;
+		height    : 25%;
+		background: #E79800;
+	}
+}
+
+.credit-card.credit-card-visa.credit-card-identified {
+	.credit-card-front {
+		&:before {
+			background-color: $background_color_4;
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-color: $background_color_4;
+		}
+	}
+
+	.credit-card-logo.credit-card-visa {
+		opacity: 1;
+	}
+}
+
+.credit-card-logo.credit-card-mastercard {
+	background-image    : url(https://dmprodcdn.blob.core.windows.net/front-office/assets/images/master-card.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-transform: uppercase;
+	color         : $white;
+	text-align    : center;
+	font-weight   : bold;
+	font-size     : 26px;
+	line-height: 36px;
+	opacity: 1 !important;
+    height: 50px;
+	&:before {
+		content      : " ";
+		display      : block;
+		width        : 36px;
+		top          : 0;
+		position     : absolute;
+		height       : 36px;
+		border-radius: 18px;
+		left         : 0;
+		background   : $primary;
+		z-index      : -1;
+	}
+
+	&:after {
+		content      : " ";
+		display      : block;
+		width        : 36px;
+		top          : 0;
+		position     : absolute;
+		height       : 36px;
+		border-radius: 18px;
+		right        : 0;
+		background   : #FFAB00;
+		z-index      : -2;
+	}
+}
+
+.credit-card.credit-card-mastercard.credit-card-identified {
+	.credit-card-front {
+		.credit-card-logo.credit-card-mastercard {
+			box-shadow: none;
+		}
+
+		&:before {
+			background-color: $background_color_5;
+		}
+	}
+
+	.credit-card-back {
+		.credit-card-logo.credit-card-mastercard {
+			box-shadow: none;
+		}
+
+		&:before {
+			background-color: $background_color_5;
+		}
+	}
+
+	.credit-card-logo.credit-card-mastercard {
+		opacity: 1;
+	}
+}
+
+.credit-card-logo.credit-card-jcb {
+	background-image    : url(https://dmprodcdn.blob.core.windows.net/front-office/assets/images/jcb.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-transform: uppercase;
+	color         : $white;
+	text-align    : center;
+	font-weight   : bold;
+	font-size     : 26px;
+	line-height: 36px;
+	opacity: 1 !important;
+    height: 48px;
+	&:before {
+		content      : " ";
+		display      : block;
+		width        : 36px;
+		top          : 0;
+		position     : absolute;
+		height       : 36px;
+		border-radius: 18px;
+		left         : 0;
+		background   : $primary;
+		z-index      : -1;
+	}
+
+	&:after {
+		content      : " ";
+		display      : block;
+		width        : 36px;
+		top          : 0;
+		position     : absolute;
+		height       : 36px;
+		border-radius: 18px;
+		right        : 0;
+		background   : #FFAB00;
+		z-index      : -2;
+	}
+}
+
+.credit-card.credit-card-jcb.credit-card-identified {
+	.credit-card-front {
+		.credit-card-logo.credit-card-jcb {
+			box-shadow: none;
+		}
+
+		&:before {
+			background-color: $background_color_5;
+		}
+	}
+
+	.credit-card-back {
+		.credit-card-logo.credit-card-jcb {
+			box-shadow: none;
+		}
+
+		&:before {
+			background-color: $background_color_5;
+		}
+	}
+
+	.credit-card-logo.credit-card-jcb {
+		opacity: 1;
+	}
+}
+
+.credit-card-logo.credit-card-maestro {
+	color      : $white;
+	font-weight: bold;
+	text-align : center;
+	font-size  : 14px;
+	line-height: 36px;
+	z-index    : 1;
+	text-shadow: 1px 1px rgba($black, 0.6);
+
+	&:before {
+		content      : " ";
+		display      : block;
+		width        : 36px;
+		top          : 0;
+		position     : absolute;
+		height       : 36px;
+		border-radius: 18px;
+		left         : 0;
+		background   : #0064CB;
+		z-index      : -1;
+	}
+
+	&:after {
+		content      : " ";
+		display      : block;
+		width        : 36px;
+		top          : 0;
+		position     : absolute;
+		height       : 36px;
+		border-radius: 18px;
+		right        : 0;
+		background   : $primaryHFA;
+		z-index      : -2;
+	}
+}
+
+.credit-card.credit-card-maestro.credit-card-identified {
+	.credit-card-front {
+		.credit-card-logo.credit-card-maestro {
+			box-shadow: none;
+		}
+
+		&:before {
+			background-color: $background_color_6;
+		}
+	}
+
+	.credit-card-back {
+		.credit-card-logo.credit-card-maestro {
+			box-shadow: none;
+		}
+
+		&:before {
+			background-color: $background_color_6;
+		}
+	}
+
+	.credit-card-logo.credit-card-maestro {
+		opacity: 1;
+	}
+}
+
+.credit-card-logo.credit-card-dankort {
+	width           : 60px;
+	height          : 36px;
+	padding         : 3px;
+	border-radius   : 8px;
+	border          : $black 1px solid;
+	background-color: $white;
+
+	.dk {
+		position: relative;
+		width   : 100%;
+		height  : 100%;
+		overflow: hidden;
+
+		&:before {
+			background-color: $primary;
+			content         : '';
+			position        : absolute;
+			width           : 100%;
+			height          : 100%;
+			display         : block;
+			border-radius   : 6px;
+		}
+
+		&:after {
+			content     : '';
+			position    : absolute;
+			top         : 50%;
+			margin-top  : -7.7px;
+			right       : 0;
+			width       : 0;
+			height      : 0;
+			border-style: solid;
+			border-width: 7px 7px 10px 0;
+			border-color: $border_color_1;
+			z-index     : 1;
+		}
+	}
+
+	.d {
+		position     : absolute;
+		top          : 50%;
+		width        : 50%;
+		display      : block;
+		height       : 15.4px;
+		margin-top   : -7.7px;
+		background   : $white;
+		left         : 0;
+		border-radius: 0 8px 10px 0;
+
+		&:before {
+			content      : '';
+			position     : absolute;
+			top          : 50%;
+			left         : 50%;
+			display      : block;
+			background   : $primary;
+			border-radius: 2px 4px 6px 0px;
+			height       : 5px;
+			width        : 7px;
+			margin       : -3px 0 0 -4px;
+		}
+	}
+
+	.k {
+		position  : absolute;
+		top       : 50%;
+		width     : 50%;
+		display   : block;
+		height    : 15.4px;
+		margin-top: -7.7px;
+		background: $white;
+		right     : 0;
+
+		&:before {
+			content     : '';
+			position    : absolute;
+			right       : 50%;
+			width       : 0;
+			height      : 0;
+			border-style: solid;
+			margin-right: -1px;
+			top         : 0;
+			border-width: 8px 5px 0 0;
+			border-color: $border_color_2;
+		}
+
+		&:after {
+			content     : '';
+			position    : absolute;
+			right       : 50%;
+			width       : 0;
+			height      : 0;
+			border-style: solid;
+			margin-right: -1px;
+			bottom      : 0;
+			border-width: 0 5px 8px 0;
+			border-color: $border_color_3;
+		}
+	}
+}
+
+.credit-card.credit-card-dankort.credit-card-identified {
+	.credit-card-front {
+		&:before {
+			background-color: $background_color_9;
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-color: $background_color_9;
+		}
+	}
+
+	.credit-card-logo.credit-card-dankort {
+		opacity: 1;
+	}
+}
+
+.credit-card-logo.credit-card-elo {
+	height        : 50px;
+	width         : 50px;
+	border-radius : 100%;
+	background    : $black;
+	color         : $white;
+	text-align    : center;
+	text-transform: lowercase;
+	font-size     : 21px;
+	font-style    : normal;
+	letter-spacing: 1px;
+	font-weight   : bold;
+	padding-top   : 13px;
+
+	.e {
+		display          : inline-block;
+		position         : relative;
+		-webkit-transform: rotate(-15deg);
+		-moz-transform   : rotate(-15deg);
+		-ms-transform    : rotate(-15deg);
+		-o-transform     : rotate(-15deg);
+		transform        : rotate(-15deg);
+	}
+
+	.l {
+		display : inline-block;
+		position: relative;
+	}
+
+	.o {
+		display          : inline-block;
+		position         : relative;
+		position         : relative;
+		display          : inline-block;
+		width            : 12px;
+		height           : 12px;
+		right            : 0;
+		top              : 7px;
+		border-radius    : 100%;
+		background-image : -webkit-linear-gradient(yellow 50%, $black 50%);
+		background-image : linear-gradient(yellow 50%, $black 50%);
+		-webkit-transform: rotate(40deg);
+		-moz-transform   : rotate(40deg);
+		-ms-transform    : rotate(40deg);
+		-o-transform     : rotate(40deg);
+		transform        : rotate(40deg);
+		text-indent      : -9999px;
+
+		&:before {
+			content      : "";
+			position     : absolute;
+			width        : 49%;
+			height       : 49%;
+			background   : $black;
+			border-radius: 100%;
+			text-indent  : -99999px;
+			top          : 25%;
+			left         : 25%;
+		}
+	}
+}
+
+.credit-card.credit-card-elo.credit-card-identified {
+	.credit-card-front {
+		&:before {
+			background-color: $background_color_10;
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-color: $background_color_10;
+		}
+	}
+
+	.credit-card-logo.credit-card-elo {
+		opacity: 1;
+	}
+}
+
+.credit-card-container {
+	-webkit-perspective: 1000px;
+	-moz-perspective   : 1000px;
+	perspective        : 1000px;
+	width              : 350px;
+	max-width          : 100%;
+	height             : 200px;
+	margin             : auto;
+	z-index            : 1;
+	position           : relative;
+}
+
+.credit-card.credit-card-flipped {
+	-webkit-transform          : rotateY(180deg);
+	-moz-transform             : rotateY(180deg);
+	-ms-transform              : rotateY(180deg);
+	-o-transform               : rotateY(180deg);
+	transform                  : rotateY(180deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility        : hidden;
+}
+
+.credit-card.credit-card-identified {
+	box-shadow: 0 0 20px rgba($black, 0.3);
+
+	.credit-card-front {
+		background-color: $black;
+		background-color: $background_color_14;
+
+		&:before {
+			-webkit-transition: all 400ms ease;
+			-moz-transition   : all 400ms ease;
+			transition        : all 400ms ease;
+			background-image  : repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			background-image  : repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), linear-gradient(-25deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			opacity           : 1;
+		}
+
+		.credit-card-logo {
+			box-shadow: 0 0 0 0 rgba($white, 0.3);
+		}
+	}
+
+	.credit-card-back {
+		background-color: $black;
+		background-color: $background_color_14;
+
+		&:before {
+			-webkit-transition: all 400ms ease;
+			-moz-transition   : all 400ms ease;
+			transition        : all 400ms ease;
+			background-image  : repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			background-image  : repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), linear-gradient(-25deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			opacity           : 1;
+		}
+
+		.credit-card-logo {
+			box-shadow: 0 0 0 2px rgba($white, 0.3);
+		}
+	}
+}
+
+.credit-card.credit-card-identified.no-radial-gradient {
+	.credit-card-front {
+		&:before {
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), linear-gradient(-25deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+		}
+	}
+
+	.credit-card-back {
+		&:before {
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+			background-image: repeating-linear-gradient(45deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(135deg, rgba($white, 0.05) 1px, rgba($white, 0) 2px, rgba($white, 0.04) 3px, rgba($white, 0.03) 4px), repeating-linear-gradient(90deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), repeating-linear-gradient(210deg, rgba($white, 0) 1px, rgba($white, 0.03) 2px, rgba($white, 0.04) 3px, rgba($white, 0.05) 4px), linear-gradient(-25deg, rgba($white, 0) 50%, rgba($white, 0.2) 70%, rgba($white, 0) 90%);
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.credit-card {
+		.credit-card-front {
+			.credit-card-lower {
+				width: 90%;
+				left : 5%;
+			}
+		}
+	}
+}

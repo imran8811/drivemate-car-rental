@@ -1,0 +1,38 @@
+<!-- <a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.USER_PROFILE_MANAGEMENT] | localize" id="profile" [translate]="'HEADER_MENU.MY_PROFILE'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.BACK_TO_MY_TRIP] | localize" id="tripHistory" [translate]="'HEADER_MENU.TRIP_HISTORY'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.MY_ORDER] | localize" id="yourOrders" [translate]="'HEADER_MENU.YOUR_ORDERS'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.MANAGE_ASSETS] | localize" id="myAssets" [translate]="'HEADER_MENU.MY_CARS'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.REQUEST_CHAT_LIST] | localize" id="navbarLineMessanger" [translate]="'HEADER_MENU.MESSAGES'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.REWARD_POINTS_HISTORY] | localize" id="rewardPoint" [translate]="'HEADER_MENU.REWARD_POINTS'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.SUPERHOST_DASHBOARD] | localize" id="superHostList" [translate]="'HEADER_MENU.SUPER_HOST'"></a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.USER_PROFILE_MANAGEMENT] | localize" id="accountSettings" [translate]="'HEADER_MENU.ACCOUNT_SETTING'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.FAQS] | localize" id="faq" [translate]="'HEADER_MENU.FAQs'"></a>
+<a class="dropdown-item NAV_LINK" href="https://www.drivemate.asia/blog/" id="blog" [translate]="'HEADER_MENU.BLOG'"></a>
+<a class="dropdown-item NAV_LINK" [routerLink]="[NAVIGATION.CONTACT_US] | localize" id="contact" [translate]="'HEADER_MENU.CONTACT_US'"></a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item NAV_LINK" (click)="logoutClicked()" id="signOut" [translate]="'HEADER_MENU.LOGOUT'"></a> -->
+
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.USER_PROFILE_MANAGEMENT}}" id="profile" [translate]="'HEADER_MENU.MY_PROFILE'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.USER_PROFILE_MANAGEMENT}}" id="profile" [translate]="'HEADER_MENU.MY_PROFILE'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.BACK_TO_MY_TRIP}}" id="tripHistory" [translate]="'HEADER_MENU.TRIP_HISTORY'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.BACK_TO_MY_TRIP}}" id="tripHistory" [translate]="'HEADER_MENU.TRIP_HISTORY'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.MY_ORDER}}" id="yourOrders" [translate]="'HEADER_MENU.YOUR_ORDERS'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.MY_ORDER}}" id="yourOrders" [translate]="'HEADER_MENU.YOUR_ORDERS'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.MANAGE_ASSETS}}" id="myAssets" [translate]="'HEADER_MENU.MY_CARS'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.MANAGE_ASSETS}}" id="myAssets" [translate]="'HEADER_MENU.MY_CARS'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.REQUEST_CHAT_LIST}}" id="navbarLineMessanger" [translate]="'HEADER_MENU.MESSAGES'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.REQUEST_CHAT_LIST}}" id="navbarLineMessanger" [translate]="'HEADER_MENU.MESSAGES'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.REWARD_POINTS_HISTORY}}" id="rewardPoint" [translate]="'HEADER_MENU.REWARD_POINTS'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.REWARD_POINTS_HISTORY}}" id="rewardPoint" [translate]="'HEADER_MENU.REWARD_POINTS'"></a>
+<div class="dropdown-divider"></div>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.USER_PROFILE_MANAGEMENT}}" id="accountSettings" [translate]="'HEADER_MENU.ACCOUNT_SETTING'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.USER_PROFILE_MANAGEMENT}}" id="accountSettings" [translate]="'HEADER_MENU.ACCOUNT_SETTING'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.FAQS}}" id="faq" [translate]="'HEADER_MENU.FAQs'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.FAQS}}" id="faq" [translate]="'HEADER_MENU.FAQs'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="https://www.drivemate.asia/blog/" id="blog" [translate]="'HEADER_MENU.BLOG'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="https://www.drivemate.asia/blog/" id="blog" [translate]="'HEADER_MENU.BLOG'"></a>
+<a *ngIf="defaultLang === 'th'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+NAVIGATION.CONTACT_US}}" id="contact" [translate]="'HEADER_MENU.CONTACT_US'"></a>
+<a *ngIf="defaultLang === 'en'" class="dropdown-item NAV_LINK" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CONTACT_US}}" id="contact" [translate]="'HEADER_MENU.CONTACT_US'"></a>
+<div class="dropdown-divider d-none d-lg-block"></div>
+<a class="dropdown-item NAV_LINK d-none d-lg-block" (click)="logoutClicked()" id="signOut" [translate]="'HEADER_MENU.LOGOUT'"></a>

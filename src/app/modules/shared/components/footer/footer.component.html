@@ -1,0 +1,182 @@
+<div class="footer-white">
+  <div class="top">
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-40 col-sm-100">
+          <div class="footer-address">
+            <div class="footer-logo mg-b-25">
+              <a href="#" class="float-left">
+                <img alt="drivemate logo" src="/assets/images/new-images/logo.svg" />
+              </a>
+              <div class="sha float-left">
+                <img alt="sha" src="/assets/images/new-images/sha-logo.svg" />
+              </div>
+            </div>
+            <div class="address-wrap">
+              <p><span [translate]="'CONTACT_US.TEXT_DM'" class="d-block"></span>
+                <span [translate]="'CONTACT_US.TEXT_ADDRESS'"></span>
+                <a class="d-block mt-4" href="tel:+66 02 026 3238">+66 02 026 3238</a>
+                <a class="d-block" href="mailto:contact@drivemate.asia">contact@drivemate.asia</a>
+              </p>
+            </div>
+            <div class="download-app">
+              <a class="app-store apple" href="https://goo.gl/6pPTDa" rel="nofollow" target="_blank"></a>
+              <a class="app-store play" href="https://goo.gl/HbL5NF" rel="nofollow" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-50">
+          <div class="h4" [translate]="'FOOTER_SECTION.HOME'"></div>
+          <ul class="mg-b-25">
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.ABOUT_US}}" [translate]="'FOOTER_SECTION.ABOUT'" id="aboutUs"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.ABOUT_US}}" [translate]="'FOOTER_SECTION.ABOUT'" id="aboutUs"></a></li>
+            <li><a href="https://www.drivemate.asia/blog/" id="blog" [translate]="'FOOTER_SECTION.BLOG'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CONTACT_US}}" [translate]="'FOOTER_SECTION.CONTACT_US'" id="contactUs"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CONTACT_US}}" [translate]="'FOOTER_SECTION.CONTACT_US'" id="contactUs"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.PRIVACY_POLICY}}" [translate]="'FOOTER_SECTION.PRIVACY_POLICY'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.PRIVACY_POLICY}}" [translate]="'FOOTER_SECTION.PRIVACY_POLICY'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.FAQs'" id="faqs"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.FAQs'" id="faqs"></a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-50">
+          <div class="h4" [translate]="'FOOTER_SECTION.DISCOVER'"></div>
+          <ul class="mg-b-25">
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.PROMOTION}}" [translate]="'FOOTER_SECTION.CHECK_OUR_PROMOTIONS'" id="promotions"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.PROMOTION}}" [translate]="'FOOTER_SECTION.CHECK_OUR_PROMOTIONS'" id="promotions"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.INSURANCE}}" [translate]="'FOOTER_SECTION.INSURANCE'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+NAVIGATION.INSURANCE+'/en'}}" [translate]="'FOOTER_SECTION.INSURANCE'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.TERMS_OF_USE}}" [translate]="'FOOTER_SECTION.TERMS_OF_SERVICE'" id="termsServices"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.TERMS_OF_USE}}" [translate]="'FOOTER_SECTION.TERMS_OF_SERVICE'" id="termsServices"></a></li>
+            <!-- <li><a [translate]="'FOOTER_SECTION.DOWNLOAD_RENTAL_AGREEMENT'"></a></li>
+            <li><a [translate]="'FOOTER_SECTION.LETTER_CONSENT_CAR_RENTAL'"></a></li> -->
+          </ul>
+        </div>
+        <div class="col col-sm-100">
+          <div class="last-col-wrap">
+            <div class="social-wrap">
+              <div class="h4" [translate]="'FOOTER_SECTION.SOCIAL'"></div>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/drivemateasia/" target="_blank">
+                  <span class="fb"></span>
+                </a>
+                <a href="https://line.me/ti/p/%40drivemate" target="_blank">
+                  <span class="line"></span>
+                </a>
+                <a href="tel:+6620263238" target="_blank" class="phone">
+                  <span class="phone"></span>
+                </a>
+                <a href="https://instagram.com/drivemate.asia?igshid=13gxt405bb2e" target="_blank" class="insta">
+                  <span class="insta"></span>
+                </a>
+              </div>
+            </div>
+            <div class="language-switch">
+              <div class="h4 mb-2" [translate]="'FOOTER_SECTION.LANGUAGE'"></div>
+              <div class="custom-select-dropdown" dropdown>
+                <a class="dropdown-toggle form-control" id="langDrop" dropdownToggle aria-controls="divlangDrop">
+                  <div class="lang-item">
+                    <span class="flag-img">
+                      <img [src]="flag" alt="{{language==='en'? 'English' : 'Thai'}}" title="{{language==='en'? 'English' : 'Thai'}}" />
+                    </span>
+                    <span class="language-name">
+                      {{language===LanguageType.ENGLISH ? 'English' : language===LanguageType.THAI ? 'Thai': 'Chinese'}}
+                    </span> 
+                  </div>
+                </a>
+                <div class="dropdown-menu" id="divlangDrop" aria-labelledby="langDrop"
+                *dropdownMenu>
+                <a class="dropdown-item NAV_LINK" id="langTh" *ngFor="let item of languages|sortBy:'asc':'id'" [ngClass]="{ 'selected': language === item.code }"
+                (click)="changeLanguage(item.code)">
+                  <div class="lang-item">
+                    <span class="flag-img">
+                      <img [src]="item.code === LanguageType.ENGLISH?FLAG_IMAGE.ENGLISH:item.code === LanguageType.THAI?FLAG_IMAGE.THAI:FLAG_IMAGE.CHINESE"/>
+                    </span>
+                    <span class="language-name">
+                      {{ item.displayName }} 
+                    </span> 
+                  </div>
+                </a>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col col-sm-50">
+          <h4 class="h4" [translate]="'FOOTER_SECTION.CAR_RENTAL_CITY'"></h4>
+          <ul class="mg-b-25">
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL+'/krabi'}}" [translate]="'FOOTER_SECTION.RENT_CAR_KRABI'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL+'/krabi'}}" [translate]="'FOOTER_SECTION.RENT_CAR_KRABI'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL+'/phuket'}}" [translate]="'FOOTER_SECTION.RENT_CAR_PHUKET'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL+'/phuket'}}" [translate]="'FOOTER_SECTION.RENT_CAR_PHUKET'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL+'/chiangmai'}}" [translate]="'FOOTER_SECTION.RENT_CAR_CHIANG'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL+'/chiangmai'}}" [translate]="'FOOTER_SECTION.RENT_CAR_CHIANG'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL+'/pattaya'}}" [translate]="'FOOTER_SECTION.RENT_CAR_PATTAYA'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL+'/pattaya'}}" [translate]="'FOOTER_SECTION.RENT_CAR_PATTAYA'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL+'/bangkok'}}" [translate]="'FOOTER_SECTION.RENT_CAR_BANGKOK'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL+'/bangkok'}}" [translate]="'FOOTER_SECTION.RENT_CAR_BANGKOK'"></a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-50">
+          <h4 class="h4" [translate]="'FOOTER_SECTION.CAR_WITH_DRIVER_CITY'"></h4>
+          <ul class="mg-b-25">
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_WITH_DRIVER+'/bangkok'}}" id="withDriverBangkok" [translate]="'FOOTER_SECTION.RENT_CAR_BANGKOK'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_WITH_DRIVER+'/bangkok'}}" id="withDriverBangkok" [translate]="'FOOTER_SECTION.RENT_CAR_BANGKOK'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_WITH_DRIVER+'/chiangmai'}}" id="withDriverChiangmai" [translate]="'FOOTER_SECTION.RENT_CAR_CHIANG'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_WITH_DRIVER+'/chiangmai'}}" id="withDriverChiangmai" [translate]="'FOOTER_SECTION.RENT_CAR_CHIANG'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_WITH_DRIVER+'/phuket'}}" id="withDriverPhuket" [translate]="'FOOTER_SECTION.RENT_CAR_PHUKET'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_WITH_DRIVER+'/phuket'}}" id="withDriverPhuket" [translate]="'FOOTER_SECTION.RENT_CAR_PHUKET'"></a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-50">
+          <h4 class="h4" [translate]="'FOOTER_SECTION.AIRPORT_TRANSFER'"></h4>
+          <ul class="mg-b-25">
+            <li><a [routerLink]="['/donmueang'] | localize" [translate]="'FOOTER_SECTION.DONMUEANG_AIRPORT'"></a></li>
+            <li><a [routerLink]="['/phuket'] | localize" [translate]="'FOOTER_SECTION.PHUKET_AIRPORT'"></a></li>
+            <li><a [routerLink]="['/chiangmai'] | localize" [translate]="'FOOTER_SECTION.CHIANGMAI_AIRPORT'"></a></li>
+            <li><a [routerLink]="['/suvarnabhumi'] | localize" [translate]="'FOOTER_SECTION.SUVARNABHUMI_AIRPORT'"></a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-50">
+          <h4 class="h4" [translate]="'SERVICES_SECTION.OUR_SERVICES'"></h4>
+          <ul class="mg-b-25">
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL}}" id="servicesCarRental" [translate]="'FOOTER_SECTION.CAR_RENTAL'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL}}" id="servicesCarRental" [translate]="'FOOTER_SECTION.CAR_RENTAL'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.MONTHLY_RENTAL}}" id="servicesSubscription" [translate]="'FOOTER_SECTION.SUBSCRIPTION'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.MONTHLY_RENTAL}}" id="servicesSubscription" [translate]="'FOOTER_SECTION.SUBSCRIPTION'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.CAR_WITH_DRIVER}}" id="servicesCarWithDriver" [translate]="'FOOTER_SECTION.CAR_WITH_DRIVER'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_WITH_DRIVER}}" id="servicesCarWithDriver" [translate]="'FOOTER_SECTION.CAR_WITH_DRIVER'"></a></li>
+            <li><a [routerLink]="['/'] | localize" [translate]="'FOOTER_SECTION.AIRPORT_TRANSFERS'"></a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-50">
+          <div class="h4" [translate]="'FOOTER_SECTION.HELP_CENTER'"></div>
+          <ul class="mg-b-25">
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.HOW_TO_BOOK_CAR'" id="faqHowToBook"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.HOW_TO_BOOK_CAR'" id="faqHowToBook"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.PAYMENT'" id="faqPayment"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.PAYMENT'" id="faqPayment"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.CANCELLATION_POLICY'" id="faqCancellation"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.CANCELLATION_POLICY'" id="faqCancellation"></a></li>
+            <!-- <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.INSURANCE'" id="faqInsurance"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.FAQS}}" [translate]="'FOOTER_SECTION.INSURANCE'" id="faqInsurance"></a></li> -->
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.SUPER_HOST}}" [translate]="'FOOTER_SECTION.SUPER_HOST'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.SUPER_HOST}}" [translate]="'FOOTER_SECTION.SUPER_HOST'"></a></li>
+            <li *ngIf="defaultLang === 'th'"><a href="{{STATIC_BASE_URL+NAVIGATION.INSTANT_BOOKING}}" [translate]="'FOOTER_SECTION.INSTANT_BOOKING'"></a></li>
+            <li *ngIf="defaultLang === 'en'"><a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.INSTANT_BOOKING}}" [translate]="'FOOTER_SECTION.INSTANT_BOOKING'"></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="w-100 dis-block mb-0 copyright-text" [translate]="'FOOTER_SECTION.COPYRIGHT_2'"></p>
+    </div>
+  </div>
+</div>
+

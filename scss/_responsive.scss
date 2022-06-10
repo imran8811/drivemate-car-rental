@@ -1,0 +1,2159 @@
+@media only screen and (max-width: 1680px) {
+	.sliderSF {
+		.carousel-item {
+			img {
+				left    : -10%;
+				position: relative;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1600px) {
+	.sliderSF {
+		.carousel-item {
+			img {
+				left: -15%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1440px) {
+	.sliderSF {
+		.carousel-item {
+			img {
+				left: -30%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1366px) {
+	.sliderSF {
+		.carousel-item {
+			img {
+				left: -40%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+
+	/*.header-search-car {
+		.lcicons {
+			display: none;
+		}
+	}*/
+	.search-list {
+		.list-thumb {
+			height: 312px;
+
+			.car-thumb {
+				height: 312px;
+
+				img {
+					max-height: 312px;
+				}
+			}
+		}
+	}
+
+	#preview li,
+	.sortable-list li {
+		width: 47%;
+	}
+
+	.cl-title {
+		max-width: 68%;
+	}
+
+	.adv-search {
+		.btn-group-cd {
+			.btn {
+				width: 100%;
+
+				&:last-child:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 74.2%;
+		}
+	}
+
+	.photo-upload-list {
+		.sortable-container {
+			max-width: 465px;
+		}
+	}
+
+	.btn-filter-b {
+		margin-top: 0;
+		float     : right;
+	}
+	.apList
+	{
+		.dropdown-menu
+		{
+			ul
+			{
+				li
+				{
+					a
+					{
+						.text
+						{
+							width: 78%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.lg-text-left
+	{
+		text-align: left !important;
+	}
+	.static-header
+	{
+		.title
+		{
+			padding-top: 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.ap-search-header {
+		.btn-switch {
+			margin-left: 304px;
+		}
+
+		.btn-sls {
+			padding: 0;
+		}
+	}
+
+	.b-dashboard {
+		height: 6115px;
+	}
+	.ap-trans-search
+	{
+		.dropdownSL
+		{
+			.pull-left
+			{
+				width: 77%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1152px) {
+	.sliderSF {
+		.carousel-item {
+			img {
+				left: -60%;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1075px) {
+	.dm-nav
+	{
+		&.nav-new
+		{
+			.navbar-collapse
+			{
+				.navbar-nav
+				{
+					.nav-item
+					{
+						.nav-link
+						{
+							padding: 10px 5px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.sliderSF {
+		.carousel-item {
+			img {
+				left: -80%;
+			}
+		}
+	}
+
+	.ap-search-header {
+		.dp {
+			.ap-from {
+				padding-left: 10px;
+			}
+		}
+	}
+
+	.ent-w {
+		width: 100% !important;
+	}
+}
+@media (min-width: 992px)
+{
+	.navbar-expand-lg
+	{
+		.navbar-collapse
+		{
+			display: inline-block !important;
+		}
+	}
+}
+@media only screen and (max-width: 991px) {
+	.car-gallery-bg {
+		height: 400px;
+		img {
+			top: -40px;
+		}
+	}
+	.sliderSF-banner {
+		display: block;
+	}
+
+	.sliderSF {
+		.slide {
+			display: none;
+		}
+	}
+
+	.section-blog {
+		.nav-tabs.nav-tabs-car-suggestions {
+			li.columns-text {
+				width        : 100%;
+				margin-bottom: 15px;
+			}
+		}
+
+		.section-blog-right-img {
+			padding: 0 15px;
+
+			.bottom {
+				.entry-thumb {
+					min-height: 260px;
+				}
+			}
+		}
+
+		.blog-card {
+			margin-bottom: 30px;
+
+			.blog-img.blog-square {
+				max-width : 100%;
+				max-height: 100%;
+			}
+		}
+	}
+
+	.list-step2 .box-st {
+		font-size: 13px
+	}
+
+	#preview li,
+	.sortable-list li {
+		width : 100%;
+		margin: 0 0 6px 0;
+	}
+
+	.adv-search,
+	.adv-faq-box,
+	.list-map {
+		display: none !important;
+	}
+
+	.adv-search.show,
+	.mob-fl-mp,
+	.list-map.show {
+		display: inline-block !important;
+	}
+
+	.adv-search {
+		position  : fixed;
+		top       : 0;
+		left      : 0;
+		bottom    : 0;
+		z-index   : 100000;
+		min-height: 100%;
+		overflow-y: auto;
+		height    : 100%;
+		padding   : 0;
+
+		.box {
+			margin: 0;
+
+			.close-filter
+			{
+				display: inline-block;
+			}
+		}
+
+		.btn-group-cd {
+			.btn {
+				width: auto;
+
+				&:last-child:before {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.list-map {
+		position  : fixed;
+		top       : 0;
+		left      : 0;
+		bottom    : 0;
+		z-index   : 100000;
+		min-height: 100%;
+		overflow-y: auto;
+		height    : 100%;
+
+		.close-map
+		{
+			display: inline-block;
+		}
+
+		agm-map {
+			height: 100%;
+		}
+	}
+
+	select.form-control {
+		background        : #fff;
+		padding-right     : .75rem;
+		appearance        : menulist;
+		-moz-appearance   : menulist;
+		-webkit-appearance: menulist;
+
+		&::-ms-expand {
+			display: inline-block !important;
+		}
+
+		&.is-invalid {
+			background: #fff;
+		}
+	}
+	.btn-list-map
+	{
+		display: none;
+	}
+	.info-loc-dd {
+		.btn {
+			span {
+				width: 89%;
+			}
+		}
+	}
+
+	.car_colors {
+		.card {
+			width: 50%;
+		}
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 96.8%;
+		}
+	}
+
+	.dm-nav-profile {
+		.navbar-brand {
+			display: inline-block;
+		}
+	}
+
+	.dm-horizontal-form {
+		.form-group {
+			label {
+				text-align: left;
+			}
+		}
+	}
+
+	.photo-upload-list {
+		.sortable-container {
+			max-width: 305px;
+
+			li {
+				width : 32% !important;
+				margin: 0 2px 4px 2px;
+			}
+		}
+	}
+
+	.delivery-list-b {
+		.delivery-item {
+			.location-checkbox+label {
+				.location-title {
+					top: 0;
+				}
+
+				.input-group {
+					margin-top: 10px;
+
+					.input-group-prepend {
+						.input-group-text {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.page-car-rent {
+		.cardetail-box {
+			.box-rent {
+				.header-review {
+					.name-review {
+						.group-rating {
+							text-align: left !important;
+						}
+					}
+				}
+
+				.verified-host {
+					float: left !important;
+				}
+			}
+		}
+	}
+
+	.btn-filter {
+		margin-top: 0;
+		float     : right;
+	}
+
+	.ap-search-header {
+		.btn-switch {
+			margin-left: 225px;
+			margin-top : 15px;
+		}
+	}
+
+	.small-header {
+		.ent {
+			margin-top: 0;
+			text-align: center;
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	.side-nav {
+		.nav {
+			.nav-link {
+				width: auto;
+			}
+		}
+	}
+	.apList
+	{
+		.dropdown-menu
+		{
+			ul
+			{
+				li
+				{
+					a
+					{
+						.text
+						{
+							width: 81%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.ap-trans-search
+	{
+		.dropdownSL
+		{
+			.pull-left
+			{
+				width: 82%;
+			}
+		}
+		.btn-switch
+		{
+			left: 47.6%;
+		}
+		.rnd
+		{
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 15px;
+			flex-basis: 100%;
+			span
+			{
+				height: 25px;
+				line-height: 25px;
+			}
+		}
+	}
+
+.search-area
+{
+	.spr
+	{
+		display: none;
+	}
+	.form-group
+	{
+		.invalid-feedback, .text-danger
+		{
+			position: relative;
+			margin-top: inherit;
+		}
+	}
+	.cr-pu
+	{
+		border-bottom: 1px solid $gray-300;
+		padding-bottom: 10px;
+	}
+	.cr-pu, .ow-pu, .rt-pu
+	{
+		margin-bottom: 10px;
+	}
+}
+.add-on
+{
+	display: inline-block;
+	.cap
+	{
+		float: none;
+		height: auto;
+		line-height: normal;
+		width: 100%;
+		clear: both;
+		padding: 5px 0;
+	}
+	.media-body
+	{
+		flex: auto;
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+}
+	.static-header
+	{
+		.title
+		{
+			padding-top: 20px;
+			text-align: center;
+
+			.display-4
+			{
+				font-size: 2.5rem;
+			}
+
+			.h1
+			{
+				font-size: 28px;
+			}
+
+			.small-img
+			{
+				margin: auto;
+			}
+		}
+	}
+	.header-search-car {
+		.dp {
+			margin-bottom: 8px;
+		}
+	}
+	.cdk-overlay-pane
+	{
+		transform: initial !important;
+	}
+	.header-search-car
+	{
+		.search-area
+		{
+			.btn-basic-search
+			{
+				padding-left: 0;
+				.btn-sls
+				{
+					height: auto;
+					position: relative;
+					top: 10px;
+					border-radius: 0 0 4px 4px !important;
+				}
+			}
+		}
+	}
+	.dm-nav {
+    &.nav-new {
+      -webkit-box-shadow: 0 0 0 -8px rgba(0, 0, 0, 0.14);
+      -moz-box-shadow   : 0 0 0 -8px rgba(0, 0, 0, 0.14);
+      box-shadow        : 0 0 0 -8px rgba(0, 0, 0, 0.14);
+      padding           : 0;
+      background-color  : transparent;
+      width             : auto;
+
+      .navbar-brand,
+      .navbar-toggler {
+        display   : none;
+        visibility: hidden;
+        opacity   : 0;
+      }
+
+      .navbar-collapse {
+        width           : 50%;
+        height          : 100%;
+        overflow-y      : auto;
+        position        : fixed;
+        max-height      : 100%;
+        top             : 56px;
+        left            : 0;
+        background-color: $white;
+
+        .navbar-nav {
+          width: 100%;
+          float: none !important;
+
+          .nav-item {
+            width  : 100%;
+            float  : none;
+            display: inline-block;
+
+            .nav-link {
+              padding: 10px 10px !important;
+            }
+
+            &.dd-user {
+              display: none;
+
+              .dropdown-toggle {
+                padding   : 10px 10px !important;
+                margin-top: 8px;
+
+                span {
+                  top: -5px;
+                }
+
+                &::after {
+                  top: 5px !important;
+                }
+              }
+
+              .dropdown-menu {
+                margin-top: 5px;
+              }
+            }
+          }
+
+          &.float-right {
+            float: left !important;
+          }
+
+          .dropdown-menu {
+            margin-top: 5px;
+            border    : 0;
+          }
+        }
+      }
+    }
+  }
+
+  .rsp-nav {
+    display   : inline-block;
+    visibility: visible;
+    opacity   : 100;
+
+    .navbar-toggler {
+      display: inline-block;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .social-network .social-wrap {
+    position: static;
+  }
+	.car-gallery-bg {
+		height: 250px;
+		img {
+			top: 0;
+		}
+	}
+	.header-search-car {
+		.dropdownSL {
+			margin-bottom: 8px;
+		}
+		.dp {
+			margin-bottom: 8px;
+		}
+		.desc {
+			padding: 0 0;
+		}
+		.lcicons {
+			display: inline-block;
+		}
+	}
+	.search-list {
+		padding: 15px;
+
+		.list-thumb {
+			height: auto;
+			.car-thumb {
+				border-radius: .25rem;
+				height: auto;
+			}
+		}
+		.card-block {
+			a {
+				&.card-detail {
+					.location {
+						display   : inline-block;
+						overflow  : initial;
+						height    : auto;
+						max-height: initial;
+					}
+					.attr
+					{
+						ul
+						{
+							min-height: auto;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.section-blog {
+		.blog-card {
+			.blog-img {
+				img {
+					margin: 0 auto 15px auto;
+				}
+			}
+			.blog-img.blog-square {
+				img {
+					margin: 0;
+				}
+			}
+		}
+		.section-blog-left-img {
+			.bottom {
+				.entry-thumb {
+					min-height: 250px;
+				}
+			}
+		}
+		.section-blog-right-img {
+			.top {
+				.entry-thumb {
+					min-height: 285px;
+				}
+			}
+		}
+		.read-more-blog {
+			text-align: left;
+		}
+	}
+	.f-space {
+		display: none;
+	}
+	.box-detail .panel-card {
+		margin-bottom: 15px
+	}
+	.box-detail .blog-header.title-left {
+		text-align: center
+	}
+	.box-detail .desc {
+		text-align: center;
+		padding   : 0 15px
+	}
+	.box-detail {
+		.title {
+			padding: 0 15px;
+		}
+		.detail {
+			padding: 0 15px;
+		}
+		.blog-header {
+			margin-bottom: 12px;
+			padding      : 0 15px;
+		}
+		.h1 {
+			font-size: 20px;
+		}
+		.h2 {
+			font-size: 18px;
+		}
+		.h3 {
+			font-size: 16px;
+		}
+		.h4 {
+			font-size: 15px;
+		}
+		.h5 {
+			font-size: 12px;
+		}
+		.h6 {
+			font-size: 12px;
+		}
+		.uploadform {
+			width        : 100%;
+			max-width    : 100%;
+			padding-left : 15px;
+			padding-right: 15px;
+			margin       : 0 auto 30px auto;
+			.gp-img {
+				padding-bottom: auto;
+			}
+			.header {
+				text-align: left;
+				.title {
+					padding: 0;
+				}
+			}
+			.lead-sub {
+				padding: 0;
+			}
+			.desc {
+				padding: 0 0;
+			}
+		}
+	}
+	.box-manage {
+		.panel-card {
+			margin-bottom: 15px;
+		}
+		background: 0 0;
+		.panel-card-manage {
+			box-shadow        : none;
+			border            : none;
+			-webkit-box-shadow: none;
+			.panel-body {
+				padding  : 0;
+				font-size: 14px;
+			}
+			.image-card {
+				margin: 15px 0;
+			}
+		}
+		.h1 {
+			font-size: 20px;
+		}
+		.h2 {
+			font-size: 18px;
+		}
+		.h3 {
+			font-size: 16px;
+		}
+		.h4 {
+			font-size: 15px;
+		}
+		.h5 {
+			font-size: 12px;
+		}
+		.h6 {
+			font-size: 12px;
+		}
+		.btn-mobile-block {
+			width        : 100%;
+			margin-bottom: 8px;
+		}
+	}
+	.box-menu {
+		.h1 {
+			font-size: 20px;
+		}
+		.h2 {
+			font-size: 18px;
+		}
+		.h3 {
+			font-size: 16px;
+		}
+		.h4 {
+			font-size: 15px;
+		}
+		.h5 {
+			font-size: 12px;
+		}
+		.h6 {
+			font-size: 12px;
+		}
+	}
+	.list-step2 {
+		margin: 0;
+		.step {
+			//display: auto;
+			padding  : 0;
+			.span-bor-left {
+				width        : 14%;
+				border-bottom: 2px solid #bdbdbd;
+				top          : 50%;
+			}
+			.span-bor-right {
+				width        : 14%;
+				border-bottom: 2px solid #bdbdbd;
+				top          : 50%;
+			}
+		}
+		.box-st {
+			font-size: 13px;
+		}
+		.nav-text.dis-inline-block {
+			display: none !important;
+		}
+	}
+	.group-step {
+		padding: 25px 0
+	}
+	.sw-footer {
+		margin-bottom: 40px;
+		text-align   : center !important;
+		.text-right {
+			text-align: center !important;
+		}
+		.btn-primary {
+			margin-top: 20px;
+		}
+	}
+	.search-list {
+		.badge {
+			top: 445px;
+		}
+	}
+	.condition {
+		.accept-condition {
+			top: 7px;
+		}
+	}
+	.input-both {
+		width: 100%;
+		.w-95 {
+			width: 100%;
+		}
+	}
+	ul.delivery {
+		li {
+			padding-left : 0px;
+			padding-right: 0px;
+			.left {
+				display: block;
+			}
+			.right {
+				display: block;
+			}
+		}
+	}
+	.panel-card {
+		.lead-sub {
+			text-align: left;
+			padding   : 0;
+		}
+		.desc {
+			text-align: left;
+			padding   : 0;
+		}
+	}
+	.car_colors {
+		.card {
+			width: 33.33%;
+		}
+	}
+	.gp-icon-location {
+		position: relative;
+		display : block;
+	}
+	.table-summary {
+		.font-normal {
+			margin-bottom: 4px;
+		}
+	}
+	.summary-blog-img {
+		margin-bottom: 15px;
+	}
+	.pagination-box {
+		.pg {
+			span {
+				display: none;
+			}
+		}
+	}
+	.group-right {
+		&.sticky-top {
+			position     : relative !important;
+			top          : 0 !important;
+			clear        : both;
+			margin-bottom: 30px;
+		}
+	}
+	.price-overlay {
+		display: none;
+	}
+	.car-gallery-bg {
+		.mp-a {
+			position           : relative;
+			left               : 0;
+			top                : 0;
+			border-width       : 0 !important;
+			border-bottom-width: 1px !important;
+			border-radius      : 0;
+			width              : 100%;
+		}
+	}
+	.group-right.sticky-top {
+		position: relative;
+	}
+	.form-control {
+		.multiselect-dropdown {
+			width: 100% !important;
+			.dropdown-btn {
+				width: 100% !important;
+			}
+			.dropdown-list {
+				width: 106%;
+			}
+		}
+	}
+	.mms.is-invalid {
+		.multiselect-dropdown {
+			.dropdown-list {
+				width: 108%;
+			}
+		}
+	}
+	.my-cl {
+		.list-thumb {
+			.car-thumb {
+				margin-bottom: 15px;
+				height       : auto;
+				width        : 100%;
+				img {
+					height: auto;
+					width : 100%;
+				}
+			}
+		}
+	}
+	.cl-title {
+		width             : 100%;
+		max-width         : 100%;
+		text-overflow     : inherit;
+		white-space       : normal;
+		line-clamp        : inherit;
+		-webkit-line-clamp: inherit;
+		overflow          : auto;
+	}
+	.sortable-list {
+		li {
+			.upl-img {
+				height: auto;
+				img {
+					max-height: 100%;
+					max-width : 100%;
+				}
+			}
+		}
+	}
+	.trips-list {
+		.pick-return {
+			margin-bottom: 10px;
+			.spr {
+				left: 35%;
+			}
+		}
+		.text-right {
+			text-align: left !important;
+		}
+	}
+	.order-list {
+		.pick-return {
+			margin-bottom: 10px;
+			.spr {
+				left: 35%;
+			}
+		}
+		.text-right {
+			text-align: left !important;
+		}
+	}
+	.auto-focus {
+		.af-content {
+			width: 95.8%;
+		}
+	}
+	.photo-upload-list {
+		.add-photos {
+			width       : 100%;
+			margin-right: 0;
+			.form-group {
+				width       : 100%;
+				margin-right: 0;
+				.up-box {
+					width: 100%;
+					.form-control {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.sortable-container {
+			width    : 100%;
+			max-width: 100%;
+			float    : none;
+			clear    : both;
+			li {
+				width: 32.3% !important;
+				.upl-img {
+					.img {
+						max-width: inherit;
+					}
+				}
+			}
+		}
+	}
+	.email-notification {
+		text-align: center;
+		.text-right {
+			text-align: center !important;
+			img {
+				height: 100px;
+			}
+		}
+	}
+	.des-about {
+		.img {
+			margin-top: 30px;
+		}
+	}
+	.inbox-messages {
+		.head {
+			position     : sticky;
+			top          : 66px;
+			z-index      : 100;
+			background   : $themeWhite;
+			border-bottom: 1px solid $themeLight;
+			padding-top  : 20px;
+		}
+		.chat-box {
+			border: 0;
+			.messages {
+				height    : auto;
+				overflow-y: inherit;
+			}
+			.input-group {
+				position: sticky;
+				bottom  : 0;
+			}
+		}
+	}
+	.ap-search-header {
+		.dp {
+			.ap-from {
+				padding-left: 15px;
+			}
+		}
+		.btn-switch {
+			position  : relative;
+			clear     : both;
+			margin    : auto;
+			display   : table;
+			top       : 10px;
+			margin-top: -30px;
+		}
+	}
+	.b-dashboard {
+		height: 6120px;
+	}
+	.ap-search-list {
+		.attr {
+			.text-right {
+				text-align: left !important;
+			}
+		}
+	}
+	.dx-scheduler-timeline {
+		&.dx-scheduler-work-space-grouped[dx-group-column-count="1"] {
+			.dx-scheduler-date-table-scrollable,
+			.dx-scheduler-header-scrollable {
+				margin-left: $dxAssetWidth !important;
+			}
+			.dx-scheduler-group-table {
+				width: $dxAssetWidth !important;
+			}
+			.dx-scheduler-timeline {
+				&.dx-scheduler-work-space-grouped[dx-group-column-count="1"] {
+					.dx-scheduler-sidebar-scrollable {
+						width: $dxAssetWidth !important;
+					}
+					.dx-scheduler-timeline {
+						&.dx-scheduler-work-space-grouped[dx-group-column-count="1"] {
+							.dx-scheduler-sidebar-scrollable {
+								&:before {
+									width: $dxAssetWidth !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.dx-scheduler-timeline-week {
+			.dx-scheduler-cell-sizes-horizontal {
+				width: 75px !important;
+			}
+		}
+	}
+	.edit-credit-switch {
+		height    : auto;
+		margin-top: 20px;
+	}
+	.ap-trans-search
+	{
+		.dropdownSL
+		{
+			.pull-left
+			{
+				width: 94%;
+			}
+		}
+		.btn-switch
+		{
+			position: relative;
+			margin: auto;
+			display: table;
+			left:0;
+			top: -7px;
+		}
+	}
+	.static-header
+	{
+		.big-img
+		{
+			height: auto;
+			img
+			{
+				display: block;
+				margin-top: 30px;
+			}
+		}
+		.title
+		{
+			padding-top: 20px;
+		}
+	}
+	.search-area
+	{
+		.flip
+		{
+			position: relative;
+			display: block;
+			margin: -15px auto 15px auto;
+			clear: both;
+			transform: rotate(90deg);
+		}
+		.cr-dp
+		{
+			margin-bottom: 10px;
+		}
+	}
+	.recom-slider
+	{
+		.owl-carousel
+		{
+			.owl-nav
+			{
+				.owl-prev, .owl-next
+				{
+					&::before
+					{
+						font-size: 18px;
+						padding: 4px 14px;
+					}
+				}
+			}
+		}
+	}
+
+}
+@media(max-width: 767px) {
+  .landing-header {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .small-header {
+    padding: 0;
+  }
+	.b-dashboard {
+		height: 4590px;
+	}
+	.search-list
+	{
+		.list-thumb
+		{
+			.car-thumb
+			{
+				img
+				{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.card-block
+		{
+			a.card-detail
+			{
+				height: auto;
+			}
+		}
+	}
+	.ap-search-list {
+		.card-block {
+			a.card-detail
+			{
+				height: auto;
+				min-height: 0;
+			}
+			.card-list-footer {
+				margin-top: 20px;
+				.btn {
+					margin-top: 37px !important;
+				}
+			}
+		}
+	}
+}
+@media(max-width: 750px) {
+	.modal-condition-gps {
+		.modal-dialog {
+			width: auto;
+		}
+
+		.list-g-driving {
+			padding: 0px;
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.auto-focus {
+		.af-content {
+			width: 95%;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+
+	/*.search-list .card-block a.card-detail .text-right,
+	.search-list .card-block .card-list-footer .text-right
+	{
+			text-align: left !important;
+	}*/
+	.search-list {
+			.cc-offer
+			{
+				bottom: 215px;
+				font-size: 12px;
+			}
+			.s-deal
+			{
+				bottom: 175px;
+				font-size: 12px;
+				.perc
+				{
+					font-size: 16px;
+				}
+			}
+		.card-block {
+			a.card-detail {
+				.attr {
+					ul {
+						margin-bottom: 0;
+						min-height   : 0;
+					}
+				}
+			}
+
+			.card-list-footer {
+
+				.col-sm-4
+				{
+					padding-left: 15px !important;
+				}
+
+				.btn {
+					margin-top: 10px;
+					width: 100%;
+				}
+
+				.badge {
+					&.pvt {
+						margin-top: 10px;
+					}
+				}
+
+			}
+		}
+
+		.badge {
+			top: 450px;
+		}
+	}
+	.ap-search-list
+	{
+		.card-block
+		{
+			a.card-detail
+			{
+				.card-title
+				{
+					overflow: auto;
+					white-space: normal;
+					word-wrap: break-word;
+				}
+			}
+		}
+	}
+	.card-list-footer {
+		margin-top: 20px;
+	}
+
+	.btn-modal-fb {
+		margin-top: 10px;
+	}
+
+	.page-car-rent {
+		.cardetail-box {
+			.profile-header {
+				.right.text-right {
+					text-align: left !important;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	.pm-status {
+		text-align: left;
+
+		span {
+			padding   : 5px 10px;
+			background: #f5f5f5;
+			display   : block;
+			width     : 100%;
+		}
+	}
+
+	.trips-list {
+		.trips-thumb {
+			height: auto;
+
+			img {
+				height: auto;
+				width : 100%;
+			}
+		}
+	}
+
+	.reviews-list {
+		.trips-thumb {
+			height: auto;
+
+			img {
+				height: auto;
+				width : 100%;
+			}
+		}
+	}
+
+	.order-list {
+		.order-thumb {
+			height: auto;
+
+			img {
+				height: auto;
+				width : 100%;
+			}
+		}
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 94.5%;
+		}
+	}
+
+	.photo-uploaded-thumb {
+		height: auto;
+
+		img {
+			height: auto;
+			width : 100%;
+		}
+	}
+
+	.submit-review {
+		.factor {
+			.text-right {
+				text-align: left !important;
+			}
+		}
+
+		.list {
+			.text-right {
+				text-align: left !important;
+			}
+		}
+	}
+
+	.submit-reply {
+		.text-right {
+			text-align: left !important;
+		}
+
+		.head {
+			.text-right {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.btn-filter {
+		float: none;
+		width: 100%;
+	}
+
+	.acc-list {
+
+		.btn-acc-del {
+			top        : 5px;
+			right      : 5px;
+			height     : 25px;
+			width      : 25px;
+			padding    : 0;
+			line-height: normal;
+		}
+	}
+
+	.inbox-messages {
+		.head {
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+
+	.sm-text-left {
+		text-align: left !important;
+	}
+
+	.sm-float-left {
+		float: left !important;
+	}
+
+	.rp-list {
+		.list-group-item {
+			.rp-counter {
+				text-align : left;
+				line-height: normal;
+				margin-top : 8px;
+			}
+		}
+	}
+
+	.asset-backup-detail {
+		display: inline-block;
+		width  : 100%;
+
+		.thumb {
+			float        : none;
+			width        : 100%;
+			height       : auto;
+			margin-right : 0;
+			margin-bottom: 10px;
+			display      : inline-block;
+			clear        : both;
+
+			img {
+				width : 100%;
+				height: auto;
+			}
+		}
+
+		.check {
+			right     : 10px;
+			top       : 10px;
+			box-shadow: -2px 2px 2px rgba(0, 0, 0, .3) !important;
+		}
+
+		.media-body {
+			float       : none;
+			width       : 100%;
+			margin-right: 0;
+			display     : inline-block;
+			clear       : both;
+		}
+
+		.text-right {
+			.btn {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.b-dashboard {
+		height: 4835px;
+	}
+	.promo-header
+	{
+		.text-right
+		{
+			text-align: center !important;
+		}
+	}
+	.header-search-car
+	{
+		.cr-dp
+		{
+			.col-sm-6
+			{
+				&:first-child
+				{
+					.form-group
+					{
+						margin-bottom: 10px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 550px) {
+	.list-g-driving {
+		padding: 0px 15px;
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 94.3%;
+		}
+	}
+
+	.photo-upload-list {
+		.sortable-container {
+			li {
+				width: 32.3% !important;
+			}
+		}
+	}
+
+	.sliderSF {
+		height: $bannerHeightRes;
+
+		.sliderSF-banner {
+			height: $bannerHeightRes;
+		}
+		&.post-search
+		{
+			height: auto;
+			.sliderSF-banner {
+				height: auto;
+			}
+		}
+	}
+
+	.b-dashboard {
+		height: 4675px;
+	}
+}
+@media(max-width: 535px) {
+	.b-dashboard {
+		height: 4545px;
+	}
+}
+@media(max-width: 525px) {
+	.b-dashboard {
+		height: 4460px;
+	}
+}
+@media(max-width: 515px) {
+	.b-dashboard {
+		height: 4370px;
+	}
+}
+@media(max-width: 505px) {
+	.b-dashboard {
+		height: 4290px;
+	}
+}
+@media(max-width: 500px) {
+	.b-dashboard {
+		height: 4250px;
+	}
+}
+@media(max-width: 480px) {
+	.b-dashboard {
+		height: 4070px;
+	}
+}
+@media(max-width: 460px) {
+	.b-dashboard {
+		height: 3895px;
+	}
+	.index-search
+	{
+		.tab-content
+		{
+			.nav-tabs
+			{
+				.nav-link
+				{
+					font-size: 14px;
+					padding: 0.5rem 0.5rem;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 455px) {
+	.btn-light {
+		.pull-left {
+			width: 80% !important;
+		}
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 92.8%;
+		}
+	}
+
+	.photo-upload-list {
+		.sortable-container {
+			li {
+				width : 48.7% !important;
+				height: auto !important;
+
+				.upl-img {
+					width : 100% !important;
+					height: auto !important;
+
+					.img {
+						width : 100% !important;
+						height: auto !important;
+					}
+				}
+			}
+		}
+	}
+
+	.b-dashboard {
+		height: 3860px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.ap-from {
+		.pull-left {
+			&.w-90 {
+				width: auto;
+			}
+
+		}
+	}
+	.b-dashboard {
+		height: 3810px;
+	}
+}
+
+@media only screen and (max-width: 443px) {
+
+	.sliderSF,
+	.sliderSF-banner {
+		height: 550px;
+	}
+	.b-dashboard {
+		height: 3749px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.list-step2 {
+		.step {
+			.span-bor-left {
+				width        : 12%;
+				border-bottom: 2px solid #bdbdbd;
+			}
+
+			.span-bor-right {
+				width        : 12%;
+				border-bottom: 2px solid #bdbdbd;
+			}
+		}
+	}
+
+	#preview {
+		li {
+			width : 100%;
+			height: auto;
+		}
+	}
+
+	.sortable-list {
+		li {
+			width : 100%;
+			height: auto;
+		}
+	}
+
+	.gp-both {
+		.left.input-price {
+			width: 30%;
+		}
+
+		.left.enable-instant {
+			width: 100%;
+		}
+	}
+
+	.car_colors {
+		.card {
+			width: 50%;
+		}
+	}
+
+	.trips-list {
+		.tabs-trips {
+			display: inline-block;
+
+			.btn {
+				width        : 50%;
+				margin-bottom: 5px;
+			}
+		}
+
+		.pick-return {
+			.spr {
+				left: 40%;
+			}
+		}
+	}
+
+	.order-list {
+		.tabs-trips {
+			display: inline-block;
+
+			.btn {
+				width        : 50%;
+				margin-bottom: 5px;
+			}
+		}
+
+		.pick-return {
+			.spr {
+				left: 40%;
+			}
+		}
+	}
+
+	.asset-backup-detail {
+		.media-body {
+			.trips-status {
+				margin-bottom: 10px;
+			}
+
+			.col-8,
+			.col-4 {
+				width    : 100%;
+				clear    : both;
+				max-width: 100%;
+				float    : none;
+				flex     : none;
+			}
+
+			.text-right {
+				text-align: left !important;
+			}
+		}
+	}
+
+	.b-dashboard {
+		height: 3600px;
+	}
+}
+
+@media only screen and (max-width: 406px) {
+	.sliderSF {
+		.container {
+			.form {
+				.nav-tabs-sl {
+					.nav-item {
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 92%;
+		}
+	}
+	.b-dashboard {
+		height: 3430px;
+	}
+	.tabs-condition
+	{
+		.nav-item
+		{
+			flex-basis: auto;
+			flex-grow: initial;
+			width: 100%;
+			margin-bottom: 5px;
+
+			.nav-link
+			{
+				border-radius: 4px;
+				border: 1px solid $themeLight;
+
+				&.active
+				{
+					border-radius: 4px;
+					border: 1px solid $themeLight;
+
+					&:hover, &:focus
+					{
+						border-radius: 4px;
+						border: 1px solid $themeLight;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width:400px) {
+	.section-blog {
+		.section-blog-left-img {
+			.top {
+				.entry-thumb {
+					min-height: 120px;
+				}
+			}
+
+			.bottom {
+				.entry-thumb {
+					min-height: 170px;
+				}
+			}
+		}
+
+		.section-blog-right-img {
+			.top {
+				.entry-thumb {
+					min-height: 200px;
+				}
+			}
+
+			.bottom {
+				.entry-thumb {
+					min-height: 145px;
+				}
+			}
+		}
+	}
+
+	.inbox-messages {
+		.asset-panel {
+			.box-pickup {
+				.table-cel {
+					max-width: 100%;
+					flex     : none;
+					display  : block;
+				}
+
+				.no-padding {
+					height: 30px;
+
+					h1 {
+						display: none;
+					}
+
+				}
+			}
+		}
+
+	}
+
+	.b-dashboard {
+		height: 3380px;
+	}
+	.dx-scheduler-view-switcher-label
+	{
+		display: none;
+	}
+}
+@media only screen and (max-width: 393px) {
+	.xdsoft_datetimepicker
+	{
+		left: 11% !important;
+	}
+}
+@media only screen and (max-width: 380px) {
+	.sliderSF {
+		.container {
+			.form {
+				.nav-tabs-sl {
+					.nav-item {
+						margin-right : 0px;
+						margin-bottom: 5px;
+						width        : 100%;
+						clear        : both;
+					}
+				}
+
+				.btn-sls {
+					width        : 100%;
+					margin-right : 0 !important;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		height: 750px;
+	}
+
+	.sliderSF-banner {
+		height: 750px;
+	}
+
+	.search-list {
+		.badge {
+			top: 460px;
+		}
+	}
+
+	.auto-focus {
+		.af-content {
+			width: 91.5%;
+		}
+	}
+
+	.b-dashboard {
+		height: 3210px;
+	}
+	.ap-search-list {
+		.card-block {
+			.card-list-footer {
+				.col-8, .col-4
+				{
+					width: 100%;
+					max-width: 100%;
+					flex: auto;
+				}
+				.btn {
+					margin-top: 20px !important;
+					width: 100%;
+					flex: auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:375px) {
+	.list-step2 {
+		.step {
+			.span-bor-left {
+				width        : 10%;
+				border-bottom: 2px solid #bdbdbd;
+			}
+
+			.span-bor-right {
+				width        : 10%;
+				border-bottom: 2px solid #bdbdbd;
+			}
+		}
+	}
+
+	.prcr-tabs {
+		li {
+			margin-right: 0;
+		}
+	}
+
+	.photo-upload-list {
+		.sortable-container {
+			li {
+				width : 100% !important;
+				margin: 0 0 5px 0;
+			}
+		}
+	}
+
+	.dropdownSL {
+		&.apList {
+			.dropdown-menu {
+				ul {
+					li {
+						a {
+							.text {
+								width: 53%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:360px) {
+	.auto-focus {
+		.af-content {
+			width: 91.2%;
+		}
+	}
+
+	.b-dashboard {
+		height: 3040px;
+	}
+	.cdk-overlay-pane {
+		left: 35px !important;
+	}
+}
+@media (max-width:345px) {
+.xdsoft_datetimepicker
+	{
+		left: auto !important;
+	}
+}
+/* @media screen and (min-width:0\0) {
+	select.form-control {
+		background:none\9;
+		padding   : 5px\9;
+	}
+} */

@@ -1,0 +1,146 @@
+<app-header></app-header>
+<!--------------- Breadcrumb ---------------->
+<div class="container mt-5 pt-5">
+  <nav aria-label="breadcrumb mt-5">
+    <ol class="breadcrumb bg-white p-0">
+      <li *ngIf="defaultLang === 'th'" class="breadcrumb-item"><a href="{{STATIC_BASE_URL}}" [translate]="'CAR_RENTAL.TEXT_1'"></a></li>
+      <li *ngIf="defaultLang === 'en'" class="breadcrumb-item"><a href="{{STATIC_BASE_URL+'/en'}}" [translate]="'CAR_RENTAL.TEXT_1'"></a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/'] | localize" [translate]="'CAR_RENTAL.TEXT_2'"></a></li>
+      <!-- <li class="breadcrumb-item text-capitalize" *ngIf="currentModel && defaultLang === 'th'">
+        <a href="{{STATIC_BASE_URL+NAVIGATION.CAR_RENTAL+currentPage}}">{{currentPage | titlecase}}</a>
+      </li>
+      <li class="breadcrumb-item text-capitalize" *ngIf="currentModel && defaultLang === 'en'">
+        <a href="{{STATIC_BASE_URL+'/en'+NAVIGATION.CAR_RENTAL+currentPage}}">{{currentPage | titlecase}}</a>
+      </li>
+      <li class="breadcrumb-item text-capitalize" *ngIf="currentModel && defaultLang === 'zh-cn'">
+        <a href="{{STATIC_BASE_URL+'/zh-cn'+NAVIGATION.CAR_RENTAL+currentPage}}">{{currentPage | titlecase}}</a>
+      </li> -->
+      <li class="breadcrumb-item active text-capitalize">{{activePage | titlecase}}</li>
+      <!-- <li class="breadcrumb-item active text-capitalize" *ngIf="currentModel">{{currentModel | titlecase}}</li> -->
+    </ol>
+  </nav>
+</div>
+<div class="container" *ngIf="NoPageFound">
+  <p class="alert alert-warning fade show" [translate]="'CAR_RENTAL.TEXT_26'"></p>
+</div>
+<!--------------- Header ---------------->
+<div *ngFor="let pageInfo of pageMetaInfo">
+  <div class="small-header landing-header mt-0" [ngStyle]="{'background-image': 'url(' + 'https://ostgserverless.blob.core.windows.net/drivemate/landing-page/' + pageInfo.photoHeaderCover + ')'}">
+    <!-- <img src="https://ostgserverless.blob.core.windows.net/drivemate/landing-page/{{pageInfo.photoHeaderCover}}" alt="{{pageInfo.headerTitle}}"> -->
+    <div class="container mt-5 mb-5">
+      <div class="temp-post-search">
+        <h1 class="h1 title font-weight-700 w-100 dis-block mb-4 text-center">{{pageInfo.headerTitle | titlecase}}</h1>
+        <app-landing-asset-search [searchLocation]="searchLocation"></app-landing-asset-search>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 mb-5">
+    <h2 class="h3 font-weight-700 w-100 dis-block mb-4" *ngIf="activePage === 'suvs'" [translate]="'LANDING_DETAILS_PAGE.TEXT_149'" [translateParams]="{value: (activePage | uppercase) + ' ' + (currentModel? currentModel : '') | titlecase}"></h2>
+    <h2 class="h3 font-weight-700 w-100 dis-block mb-4" *ngIf="activePage != 'suvs'" [translate]="'LANDING_DETAILS_PAGE.TEXT_149'"  [translateParams]="{value: activePage + ' ' + (currentModel? currentModel : '') | titlecase}"></h2>
+    <div class="row pop-cars">
+      <div class="col-sm-4 mb-4" *ngFor="let asset of assetsSearch">
+        <div class="card pop-cars-item">
+          <span class="price">{{asset.dailyPrice}} ฿</span>
+          <div class="card-thumb">
+            <img class="img-responsive" src="{{asset.pictures[0]?.imagePaths.original}}" alt="asset image" />
+          </div>
+          <div class="card-body">
+            <div class="h5 title">{{asset.makeName + " " + asset.assetModelName + ' ' + asset.modelYear}}</div>
+            <div class="location mb-3">{{asset.locationName}}</div>
+            <a *ngIf="defaultLang === 'th'" href="{{STATIC_BASE_URL+NAVIGATION.ABOUT_ASSET+'/'+asset.makeName.replace(REGEX.REPLACE_SPACE_WITH_DASH, '-')+'-'+asset.assetModelName.replace(REGEX.REPLACE_SPACE_WITH_DASH, '-')+'-'+asset.modelYear+'-'+asset._id}}" class="btn btn-primary btn-block" id="btnSelect">Select</a>
+            <a *ngIf="defaultLang === 'en'" href="{{STATIC_BASE_URL+'/en'+NAVIGATION.ABOUT_ASSET+'/'+asset.makeName.replace(REGEX.REPLACE_SPACE_WITH_DASH, '-')+'-'+asset.assetModelName.replace(REGEX.REPLACE_SPACE_WITH_DASH, '-')+'-'+asset.modelYear+'-'+asset._id}}" class="btn btn-primary btn-block" id="btnSelect">Select</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 dis-block mb-5">
+      <button type="button" class="btn btn-default btn-lg btn-block h-50px mb-2" (click)="loadMoreAssets()" *ngIf="moreAssets">
+        <span class="h6" [translate]="'CAR_RENTAL.TEXT_19'"></span>
+      </button>
+      <div class="alert alert-warning" *ngIf="noAssetFound && activePage === 'suvs'" [translate]="'LANDING_DETAILS_PAGE.TEXT_151'" [translateParams]="{value: (activePage | uppercase) + ' ' + (currentModel? currentModel : '') | titlecase}"></div>
+      <div class="alert alert-warning" *ngIf="noAssetFound && activePage != 'suvs'" [translate]="'LANDING_DETAILS_PAGE.TEXT_151'" [translateParams]="{value: activePage + ' ' + (currentModel? currentModel : '') | titlecase}"></div>
+    </div>
+    <!--------------- Reviews ---------------->
+    <h2 class="h3 font-weight-700 w-100 dis-block mb-4" *ngIf="activePage === 'suvs'" [translate]="'LANDING_DETAILS_PAGE.TEXT_150'" [translateParams]="{value: (activePage | uppercase) + ' ' + (currentModel? currentModel : '') | titlecase}"></h2>
+    <h2 class="h3 font-weight-700 w-100 dis-block mb-4" *ngIf="activePage != 'suvs'" [translate]="'LANDING_DETAILS_PAGE.TEXT_150'" [translateParams]="{value: activePage + ' ' + (currentModel? currentModel : '') | titlecase}"></h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let review of topReviews">
+        <div class="card">
+          <div class="card-body">
+            <div class="media user-media mb-2">
+              <div class="thumb mr-3 h-50px w-50px">
+                <img class="h-50px" src="{{review.renter.profilePicture}}" alt="profile pic" />
+              </div>
+              <div class="media-body pt-0">
+                <div class="h5 font-weight-600 w-100 dis-block mb-0">{{review.assetMakeName+' '+review.assetModelName}}</div>
+                <div class="h6 w-100 dis-block text-primary">
+                  <i class="fa fa-star" aria-hidden="true" *ngFor="let star of [].constructor(review.renterReviews.starRating)"></i>
+                </div>
+              </div>
+            </div>
+            <div class="w-100 h-85px dis-inline-block scroll-hidden">{{review.renterReviews.reviewComment}}</div>
+            <div class="w-100 dis-inline-block">
+              <b>{{review.renter.firstName+' '+review.renter.lastName}} </b><br>
+              {{review.renterReviewDate | date : 'medium'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-default btn-lg btn-block h-50px mb-5" (click)="loadMoreReviews()" *ngIf="moreReviews">
+      <span class="h6" [translate]="'CAR_RENTAL.TEXT_19'"></span>
+    </button>
+    <div class="alert alert-warning" *ngIf="noReviewFound" [translate]="'LANDING_DETAILS_PAGE.TEXT_154'" [translateParams]="{value: activePage}"></div>
+    <!--------------- Page Content ---------------->
+    <div [innerHTML]="pageInfo.content | safeHtml"></div>
+    <!--------------- We Serve ---------------->
+    <h3 class="h3 font-weight-700 w-100 dis-block mb-5 text-center" [translate]="'LANDING_DETAILS_PAGE.TEXT_78'">We serve you more than renting a car</h3>
+    <div class="row mb-5 text-center">
+      <div class="col-md-4 col-sm-12 mb-3">
+        <img class="h-50px" src="https://dmprodcdn.blob.core.windows.net/front-office/assets/images/best-choice.svg" alt="The best option for you" title="The best option for you" />
+        <div class="h6 font-weight-700 w-100 dis-block mt-2" [translate]="'LANDING_DETAILS_PAGE.TEXT_79'">The best option for you</div>
+        <p class="text-muted" [translate]="'LANDING_DETAILS_PAGE.TEXT_80'">We select the best cars That will help you make better decisions when renting a car</p>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-3">
+        <img class="h-50px" src="https://dmprodcdn.blob.core.windows.net/front-office/assets/images/verify_vehicle.svg" alt="Inspect the car before service." title="Inspect the car before service." />
+        <div class="h6 font-weight-700 w-100 dis-block mt-2" [translate]="'LANDING_DETAILS_PAGE.TEXT_81'">Inspect the car before service.</div>
+        <p class="text-muted" [translate]="'LANDING_DETAILS_PAGE.TEXT_82'">We check the condition of car rentals from experts. Before serving</p>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-3">
+        <img class="h-50px" src="https://dmprodcdn.blob.core.windows.net/front-office/assets/images/customer_services.svg" alt="Assistance service" title="Assistance service" />
+        <div class="h6 font-weight-700 w-100 dis-block mt-2" [translate]="'LANDING_DETAILS_PAGE.TEXT_83'">Assistance service</div>
+        <p class="text-muted" [translate]="'LANDING_DETAILS_PAGE.TEXT_84'">We have a customer support team in Thai. We will be by your side every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------- Links ---------------->
+<div class="w-100 dis-inline-block border border-top-light">
+  <div class="container mt-5 mb-5">
+    <h3 class="h4 font-weight-700 w-100 dis-block mb-4" [translate]="'LANDING_DETAILS_PAGE.TEXT_85'">Include other car brands that you might be interested in</h3>
+    <div class="row temp-footer-links">
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/toyota'] | localize" [translate]="'KEYWORDS.TEXT_28'">Rent a car Toyota</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/honda'] | localize" [translate]="'KEYWORDS.TEXT_29'">Rent a car Honda</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/mazda'] | localize" [translate]="'KEYWORDS.TEXT_30'">Rent a Mazda</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/benz'] | localize" [translate]="'KEYWORDS.TEXT_31'">Rent Benz</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/bmw'] | localize" [translate]="'KEYWORDS.TEXT_32'">Rent a BMW</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/nissan'] | localize" [translate]="'KEYWORDS.TEXT_33'">Rent a car Nissan</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a [routerLink]="['/suzuki'] | localize" [translate]="'KEYWORDS.TEXT_34'">Rent a car Suzuki</a>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

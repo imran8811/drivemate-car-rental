@@ -1,0 +1,174 @@
+import { IDriver, Driver } from '../../booking-models/data-model/driver.model';
+import { ITaxInvoice, TaxInvoice } from '../../booking-models/data-model/tax-invoice.model';
+import { IRent, Rent } from '../../booking-models/data-model/rent.model';
+import { IDocument } from '../../asset-models/data-model/document';
+import { IBackupCar } from '../../booking-models/data-model/backup-car-model';
+import { IAsset } from '../../asset-models';
+import { InvoiceDetail } from '../../billing-models';
+import { IUser } from '../../authentication';
+import { IConfigurationTypeValue } from '../../configuration-type';
+import { IPaymentReceipt } from '../airport-transfer-booking';
+import { ILocation, Location } from '../../location/location';
+import { IBookingStatusesModel } from '../data-model/bookingStatuses.model';
+
+export interface IBookingViewModel {
+  _assetId: string;
+  _assetOwnerId: string;
+  _invoiceId: string;
+  _memberId: string;
+  _primaryAssetId: string;
+  _primaryAssetOwnerId: string;
+  _quotationId: string;
+  actionReason: string;
+  asset: IAsset;
+  backupCars: IBackupCar[];
+  bookingId: string;
+  carPickupDocs: IDocument[];
+  carReturnDocs: IDocument[];
+  createdAt: string;
+  currencyCode: string;
+  currencyDisplayName: string;
+  dayHold: number;
+  displayStatus: string;
+  documentsUploaded: boolean;
+  driver: IDriver;
+  endDate: string;
+  flightNumber: string;
+  insuranceTypeCode: string;
+  insuranceTypeDisplayName: string;
+  invoice: InvoiceDetail;
+  isBookingForSomeoneElse: boolean;
+  isCarBack: boolean;
+  isConfirm: boolean;
+  isDelivery: boolean;
+  isInstantBook: boolean;
+  isPickup: boolean;
+  isReturn: boolean;
+  isSendCar: boolean;
+  latitude: number;
+  longitude: number;
+  message: string;
+  note: string;
+  paymentMethod: string;
+
+  pickupTypeCode: string;
+  pickupTypeDisplayName: string;
+  rent: IRent;
+  returnLocation: string;
+  startDate: string;
+  status: string;
+  taxInvoiceRecipient: ITaxInvoice;
+  totalPeriod: number;
+  useSmartMatch: boolean;
+  version: number;
+  quotation: InvoiceDetail;
+  taxInvoiceUrl: string;
+  isTaxInvoiceRequired: boolean;
+  owner: IUser;
+  renter: IUser;
+  ownerName: string;
+  renterName: string;
+  ownerTypeCode: string;
+  ownerTypeDisplayName: string;
+  paymentMode: IConfigurationTypeValue;
+  payslipDocs: IDocument[];
+  cancellation: IBookingStatusesModel;
+  declination: IBookingStatusesModel;
+  numberOfAssets: number;
+  pickNDropsCount: number;
+
+  paymentReceipt: IPaymentReceipt;
+  isSwitchedCar: boolean;
+
+  pickupAddress: string;
+  pickupLocation: ILocation;
+
+  dropOffAddress: string;
+  dropOffLocation: ILocation;
+
+  returnPickupAddress: string;
+  returnPickupLocation: ILocation;
+
+  returnDropOffAddress: string;
+  returnDropOffLocation: ILocation;
+}
+
+export class BookingViewModel implements IBookingViewModel {
+  '_assetId' = '';
+  '_assetOwnerId' = '';
+  '_invoiceId': string;
+  '_memberId': string;
+  '_primaryAssetId' = '';
+  '_primaryAssetOwnerId' = '';
+  '_quotationId' = '';
+  actionReason = '';
+  asset: IAsset;
+  backupCars = [];
+  bookingId = '';
+  carPickupDocs = [];
+  carReturnDocs = [];
+  createdAt = '';
+  currencyCode: string;
+  currencyDisplayName: string;
+  dayHold = 0;
+  displayStatus = '';
+  documentsUploaded = false;
+  driver = new Driver();
+  endDate: string;
+  flightNumber = '';
+  insuranceTypeCode: string;
+  insuranceTypeDisplayName: string;
+  invoice: InvoiceDetail;
+  isBookingForSomeoneElse = false;
+  isCarBack = false;
+  isConfirm = false;
+  isDelivery = false;
+  isInstantBook = false;
+  isPickup = false;
+  isReturn = false;
+  isSendCar = false;
+  isTaxInvoiceRequired = false;
+  latitude = 0;
+  longitude = 0;
+  message = '';
+  note = '';
+  owner: IUser;
+  ownerName = '';
+  ownerTypeCode = '';
+  ownerTypeDisplayName = '';
+  paymentMethod = '';
+  paymentMode: IConfigurationTypeValue;
+  payslipDocs: [];
+  pickupTypeCode = '';
+  pickupTypeDisplayName = '';
+  quotation: InvoiceDetail;
+  rent = new Rent();
+  renter: IUser;
+  renterName = '';
+  returnLocation = '';
+  startDate: string;
+  status: string;
+  taxInvoiceRecipient = new TaxInvoice();
+  taxInvoiceUrl: string;
+  totalPeriod = 0;
+  useSmartMatch = false;
+  version: number;
+  cancellation: IBookingStatusesModel;
+  declination: IBookingStatusesModel;
+  numberOfAssets: number;
+  pickNDropsCount: number;
+  paymentReceipt: IPaymentReceipt;
+  isSwitchedCar = false;
+
+  pickupAddress: string;
+  pickupLocation = new Location();
+
+  dropOffAddress: string;
+  dropOffLocation = new Location();
+
+  returnPickupAddress: string;
+  returnPickupLocation = new Location();
+
+  returnDropOffAddress: string;
+  returnDropOffLocation = new Location();
+}

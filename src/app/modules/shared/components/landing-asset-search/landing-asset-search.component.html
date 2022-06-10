@@ -1,0 +1,205 @@
+<div class="bg-white display-inline-block w-100 p-3">
+  <div class="search-area">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 cr-pu">
+          <div class="form-group mb-0">
+            <div class="form-group">
+              <label class="caption" [translate]="'SEARCH_SECTION.PICK_UP_LOCATION'"></label>
+              <div class="dropdown">
+                <div class="btn-group w-100">
+                  <input
+                    type="text"
+                    class="form-control search-control NOT_CLOSE text-capitalize"
+                    autocomplete="off"
+                    id="idPickupLocation"
+                    placeholder="{{'SEARCH_SECTION.ENTER_PICKUP_LOCATION'| translate }}"
+                    (click)="isCollapsed = false"
+                    [attr.aria-expanded]="!isCollapsed"
+                    aria-controls="pickupLocation"
+                    [(ngModel)]="location"
+                  />
+                  <i id="close" class="fa fa-close cursor-pointer" *ngIf="location" (click)="onPickupAddressChanged('', null, null)"></i>
+                </div>
+                <div class="text-danger" *ngIf="!locationValid && !location" [translate]="'MESSAGES.REQUIRED'"></div>
+                <div id="pickupLocation" class="dropdown-menu" [collapse]="isCollapsed" [isAnimated]="true">
+                  <div class="list-group list-group-acc list-group-ngx">
+                    <accordion [closeOthers]="true" [isAnimated]="true">
+                      <div class="list-group-item" *ngFor="let city of cities | filter:location">
+                        <accordion-group>
+                          <div accordion-heading class="NOT_CLOSE">
+                            {{city.name}}
+                          </div>
+                          <div class="locations">
+                            <div class="apList">
+                              <ul>
+                                <li *ngFor="let place of city.places | filter: location">
+                                  <a [ngClass]="{ 'airport': place.type === PlaceTypes.Airport, 'map': place.type !== PlaceTypes.Airport }" (click)="onPickupAddressChanged(place.name, place.location.coordinates[0], place.location.coordinates[1])">
+                                    <div class="media">
+                                      <div class="media-body"><span class="text">{{place.name}}</span></div>
+                                      <span class="badge">{{place.type}}</span>
+                                    </div>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </accordion-group>
+                      </div>
+                    </accordion>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-12 cr-dp">
+        <span class="spr"></span>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label class="caption" [translate]="'SEARCH_SECTION.PICK_UP_DATE'"></label>
+              <input placeholder="{{'SEARCH_SECTION.PICK_UP_DATE' | translate}}" class="form-control" [(ngModel)]="dateRange" [min]="minDate" [readonly]="true" [selectMode]="'rangeFrom'" [owlDateTimeTrigger]="dtRange1" [owlDateTime]="dtRange1">
+              <owl-date-time (afterPickerOpen)="afterPickupPickerOpen()" (afterPickerClosed)="onPickupDateChanged()" [pickerType]="'calendar'" #dtRange1></owl-date-time>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label class="caption" [translate]="'SEARCH_SECTION.PICK_UP_TIME'"></label>
+              <div class="btn-group w-100" dropdown>
+                <input id="btnTimeFrom" type="button" class="form-control text-left dropdown-toggle" [(ngModel)]="fromTime" placeholder="{{'SEARCH_SECTION.PICK_UP_TIME' | translate}}" dropdownToggle aria-controls="ddTimeFrom">
+                <ul id="ddTimeFrom" *dropdownMenu class="dropdown-menu time-dropdown" role="menu" aria-labelledby="btnTimeFrom">
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('00:00')">00:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('00:30')">00:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('01:00')">01:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('01:30')">01:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('02:00')">02:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('02:30')">02:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('03:00')">03:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('03:30')">03:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('04:00')">04:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('04:30')">04:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('05:00')">05:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('05:30')">05:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('06:00')">06:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('06:30')">06:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('07:00')">07:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('07:30')">07:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('08:00')">08:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('08:30')">08:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('09:00')">09:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('09:30')">09:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('10:00')">10:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('10:30')">10:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('11:00')">11:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('11:30')">11:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('12:00')">12:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('12:30')">12:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('13:00')">13:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('13:30')">13:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('14:00')">14:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('14:30')">14:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('15:00')">15:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('15:30')">15:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('16:00')">16:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('16:30')">16:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('17:00')">17:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('17:30')">17:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('18:00')">18:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('18:30')">18:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('19:00')">19:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('19:30')">19:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('20:00')">20:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('20:30')">20:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('21:00')">21:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('21:30')">21:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('22:00')">22:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('22:30')">22:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('23:00')">23:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setFromTime('23:30')">23:30</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 cr-dp">
+        <span class="spr"></span>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label class="caption" [translate]="'SEARCH_SECTION.RETURN_DATE'"></label>
+              <input #txtRang2 placeholder="{{'SEARCH_SECTION.RETURN_DATE' | translate}}" class="form-control" [(ngModel)]="dateRange" [min]="minDate" [readonly]="true" [selectMode]="'rangeTo'" [owlDateTimeTrigger]="dtRange2" [owlDateTime]="dtRange2" />
+              <owl-date-time (afterPickerOpen)="afterPickupPickerOpen()" (afterPickerClosed)="onDropoffDateChanged()" [pickerType]="'calendar'" #dtRange2></owl-date-time>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label class="caption" [translate]="'SEARCH_SECTION.RETURN_TIME'"></label>
+              <div class="btn-group w-100" dropdown>
+                <input id="btnTimeTo" type="button" class="form-control text-left dropdown-toggle" [(ngModel)]="toTime" placeholder="{{'SEARCH_SECTION.PICK_UP_TIME' | translate}}" dropdownToggle aria-controls="ddTimeTo">
+                <ul id="ddTimeTo" *dropdownMenu class="dropdown-menu time-dropdown" role="menu" aria-labelledby="btnTimeTo">
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('00:00')">00:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('00:30')">00:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('01:00')">01:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('01:30')">01:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('02:00')">02:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('02:30')">02:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('03:00')">03:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('03:30')">03:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('04:00')">04:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('04:30')">04:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('05:00')">05:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('05:30')">05:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('06:00')">06:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('06:30')">06:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('07:00')">07:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('07:30')">07:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('08:00')">08:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('08:30')">08:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('09:00')">09:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('09:30')">09:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('10:00')">10:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('10:30')">10:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('11:00')">11:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('11:30')">11:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('12:00')">12:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('12:30')">12:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('13:00')">13:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('13:30')">13:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('14:00')">14:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('14:30')">14:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('15:00')">15:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('15:30')">15:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('16:00')">16:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('16:30')">16:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('17:00')">17:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('17:30')">17:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('18:00')">18:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('18:30')">18:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('19:00')">19:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('19:30')">19:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('20:00')">20:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('20:30')">20:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('21:00')">21:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('21:30')">21:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('22:00')">22:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('22:30')">22:30</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('23:00')">23:00</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;" (click)="setToTime('23:30')">23:30</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="w-100 dis-inline-block text-right" (ngSubmit)="navigateToSearch()">
+    <button type="submit" class="btn btn-primary btn-lg pl-4 pr-4" id="btnPostSearch">
+      <span class="h5">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span [translate]="'CAR_RENTAL.TEXT_6'"></span>
+      </span>
+    </button>
+  </form>
+</div>

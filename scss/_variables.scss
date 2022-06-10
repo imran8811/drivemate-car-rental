@@ -1,0 +1,87 @@
+/********************** Color Variables **********************/
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-225: #E6E6E6 !default;
+$gray-250: #F2F2F2 !default;
+$gray-275: #E5E5E5 !default;
+$gray-300: #dee2e6 !default;
+$gray-350: #E0E0E0 !default;
+$gray-375: #D9D9D9 !default;
+$gray-400: #ced4da !default;
+$gray-450: #BFBFBF !default;
+$gray-500: #adb5bd !default;
+$gray-550: #a3a3a3 !default;
+$gray-600: #6c757d !default;
+$gray-650: #7F7F7F !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+$primary: #ea2227 !default;
+$primaryHFA: #ad1518 !default;
+$secondary: #4d4d4d !default;
+$secondaryHFA: #343434 !default;
+$secondaryB: #4a4a4a !default;
+$success: #28a745 !default;
+$successHFA: #218838 !default;
+$warning: #ffc107 !default;
+$warningHFA: #e0a800 !default;
+$danger: #dc3545 !default;
+$dangerHFA: #c82333 !default;
+$info: #17a2b8 !default;
+$infoHFA: #138496 !default;
+$optionalA: #4fa0f8 !default;
+$optionalAlHFA: #3f90e7 !default;
+$optionalB: #35495e !default;
+$optionalBHFA: #263546 !default;
+$defaultGrey: #ccc !default;
+$bgGrey: #f8f8f8 !default;
+$noPhotoColor: #e0e0e0 !default;
+$themeLight: #eaeaea !default;
+$themeWhite: #fff !default;
+$disabled: #e9ecef !default;
+$customTabColor: #828282 !default;
+$themeLightGreen: #b6d552 !default;
+$fb: #3b5998 !default;
+$tw: #55acee !default;
+$sh: #95d03a !default;
+$line: #00b900 !default;
+$insta: #d3006e !default;
+
+$font-family-base: 'Montserrat-500', Arial, Helvetica, sans-serif !default;
+
+$bannerHeight: 575px !default;
+$bannerHeightRes: 800px !default;
+$dxAssetWidth: 250px !default;
+$dxAssetHeight: 475px !default;
+$simCarImgHeight: 200px !default;
+$simCardRadius:    3px !default;
+$editProfileThumb:  150px !default;
+$photoUploadListHW:   112px !default;
+
+$border-color:  $gray-450 !default;
+
+// The dropdown menu
+$dropdown-padding-y: 0.75rem !default;
+$dropdown-padding-x: 0.75rem !default;
+$dropdown-border-radius: 1rem !default;
+$dropdown-box-shadow: 0 2rem 4rem rgba($black, 0.16) !default;
+$dropdown-border-color: $gray-250 !default;
+$dropdown-item-padding-y: 0.813rem !default;
+$dropdown-item-padding-x: 1.5rem !default;
+$dropdown-inner-border-radius: 0.5rem !default;
+
+// Form
+$input-padding-y: 0.75rem !default;
+$input-padding-x: 0.75rem !default;
+$input-font-family: $font-family-base !default;
+$input-font-size: 1rem !default;
+$input-border-radius: 0.5rem !default;
+$input-height: 3rem !default;
+$input-border-color: $gray-450 !default;
+$form-feedback-invalid-color: #EB2227 !default;
+$input-placeholder-color: $gray-450 !default;
+$input-plaintext-color: $black !default;
+$form-feedback-icon-invalid: none !default;
+$input-disabled-bg: $gray-100 !default;

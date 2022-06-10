@@ -1,0 +1,64 @@
+import { IPicture } from '../data-model/picture';
+import { IDocument } from '../data-model/document';
+import { ILocation } from '../data-model/location';
+
+export interface ICreateAssetInfoView {
+    _id: string;
+    _makeId: string;
+    makeName: string;
+    _modelId: string;
+    assetModelName: string;
+    _subModelId: string;
+    subModelName: string;
+    modelYear: number;
+    pictures: IPicture[];
+    documents: IDocument[];
+    agreedTermsAndConditionsCopy: string;
+    location: ILocation;
+    locationName: string;
+    licensePlateNumber: string;
+    issuingCountryCode: string;
+    issuingCountryDisplayName: string;
+    registeredYear: number;
+    engineCode: string;
+    engineSerialNumber: string;
+    countryOfOriginCode: string;
+    countryOfOriginDisplayName: string;
+    dateOfProduction: string;
+    transmissionSerialNumber: string;
+    plantCode: string;
+    vinNumber: string;
+    dailyPrice: number;
+    monthlyPrice: number;
+    rentalCategoryCode: string;
+}
+export class CreateAssetInfoView implements ICreateAssetInfoView {
+    '_id': string;
+    '_makeId' = '';
+    makeName = '';
+    '_modelId' = '';
+    assetModelName = '';
+    '_subModelId' = '';
+    subModelName = '';
+    modelYear = 0;
+    pictures = [];
+    documents = [];
+    agreedTermsAndConditionsCopy = '';
+    location = { type: 'Point', coordinates: [0, 0] };
+    locationName = '';
+    licensePlateNumber = '';
+    issuingCountryCode = '';
+    issuingCountryDisplayName = '';
+    registeredYear = 0;
+    engineCode = '';
+    engineSerialNumber = '';
+    countryOfOriginCode = '';
+    countryOfOriginDisplayName = '';
+    dateOfProduction = '';
+    transmissionSerialNumber = '';
+    plantCode = '';
+    vinNumber = '';
+    dailyPrice = 0;
+    monthlyPrice = 0;
+    rentalCategoryCode = '';
+}

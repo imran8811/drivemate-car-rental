@@ -1,0 +1,12 @@
+<div class="pop-loc">
+<owl-carousel-o [options]="customOptions"  (translated)="getPassedData($event)" (change)="getChangeData($event)" (changed)="getChangedData($event)">
+    <ng-container *ngFor="let item of carouselData" >
+      <ng-template carouselSlide>
+          <a routerLink="{{item.id}}" class="pop-loc-item">
+            <span>{{item.text}}</span>
+            <img src="{{item.src}}" alt="{{item.text}}" />
+          </a>
+      </ng-template>
+    </ng-container>
+</owl-carousel-o>
+</div>

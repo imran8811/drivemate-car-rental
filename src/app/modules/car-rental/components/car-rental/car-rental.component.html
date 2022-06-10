@@ -1,0 +1,236 @@
+<app-header></app-header>
+<!--------------- Breadcrumb ---------------->
+<div class="container mt-5 bg-white pt-5">
+  <nav aria-label="breadcrumb bg-white mt-5">
+    <ol class="breadcrumb bg-white p-0">
+      <li *ngIf="defaultLang === 'th'" class="breadcrumb-item"><a href="{{STATIC_BASE_URL}}" [translate]="'CAR_RENTAL.TEXT_1'"></a></li>
+      <li *ngIf="defaultLang === 'en'" class="breadcrumb-item"><a href="{{STATIC_BASE_URL+'/en'}}" [translate]="'CAR_RENTAL.TEXT_1'"></a></li>
+      <li class="breadcrumb-item active" aria-current="page" [translate]="'CAR_RENTAL.TEXT_2'"></li>
+    </ol>
+  </nav>
+</div>
+<div class="container" *ngIf="NoPageFound">
+  <p class="alert alert-warning fade show" [translate]="'CAR_RENTAL.TEXT_26'"></p>
+</div>
+<!--------------- Header ---------------->
+<div *ngFor="let pageInfo of pageMetaInfo">
+  <div class="small-header landing-header mt-0" [ngStyle]="{'background-image': 'url(' + 'https://ostgserverless.blob.core.windows.net/drivemate/landing-page/' + pageInfo.photoHeaderCover + ')'}">
+    <!-- <img src="https://ostgserverless.blob.core.windows.net/drivemate/landing-page/{{pageInfo.photoHeaderCover}}" alt="{{pageInfo.headerTitle}}"> -->
+    <div class="container mt-5 mb-5">
+      <div class="temp-post-search">
+        <h1 class="h1 title font-weight-700 w-100 dis-block mb-4 text-center">{{pageInfo.headerTitle | titlecase}}</h1>
+        <app-landing-asset-search [searchLocation]="'Bangkok'"></app-landing-asset-search>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-5">
+    <!--------------- Popular Locations ---------------->
+    <h2 class="h3 font-weight-700 w-100 dis-block mb-4" [translate]="'CAR_RENTAL.TEXT_7'"></h2>
+    <div class="w-100 dis-inline-block mb-5">
+      <app-carousel-locations [carouselData]="carouselData" [customOptions]="customOptions"></app-carousel-locations>
+    </div>
+    <!--------------- Brands ---------------->
+    <h3 class="h3 font-weight-700 w-100 dis-block mb-4" [translate]="'CAR_RENTAL.TEXT_8'"></h3>
+    <div class="row mb-5" *ngIf="topBrands">
+      <div class="col mb-3" *ngFor="let topbrands of topBrands">
+        <a routerLink="{{topbrands.makeName.replace(' ', '-').toLowerCase()}}" class="btn btn-default btn-block">
+          <div class="media brand-media">
+            <div class="thumb" [ngSwitch]="topbrands.makeName">
+              <img *ngSwitchCase = "'Aston martin'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/aston-martin-logo.jpg" alt="Aston Martin" />
+              <img *ngSwitchCase = "'Audi'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/audi-logo.jpg" alt="Audi" />
+              <img *ngSwitchCase = "'Honda'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/honda-logo.png" alt="Honda" />
+              <img *ngSwitchCase = "'BMW'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/bmw-logo.png" alt="BMW" />
+              <img *ngSwitchCase = "'Mazda'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/mazda-logo.png" alt="Mazda" />
+              <img *ngSwitchCase = "'Nissan'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/nissan-logo.png" alt="Nissan" />
+              <img *ngSwitchCase = "'Peugeot'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/peugeot-logo.png" alt="Puegoet" />
+              <img *ngSwitchCase = "'Chevrolet'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/chevrolet-logo.png" alt="Chevrolet" />
+              <img *ngSwitchCase = "'Ford'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/ford-logo.png" alt="Ford" />
+              <img *ngSwitchCase = "'Toyota'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/toyota-logo.png" alt="Toyota" />
+              <img *ngSwitchCase = "'Mitsubishi'" class="img-responsive" src="/static/images/web/front-office/landing-pages/popular-brands/mitsubishi-logo.png" alt="Mitsubishi" />
+              <img *ngSwitchDefault class="img-responsive" src="/static/images/web/front-office/landing-pages/no-photo-420.jpg" alt="no photo found" />
+            </div>
+            <div class="media-body text-center">
+              {{topbrands.makeName | titlecase}}
+              <br>
+              <small class="text-primary">{{topbrands.numberOfAssets}} <span [translate]="'CAR_RENTAL.TEXT_9'"></span></small>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--------------- Rental Types ---------------->
+    <h4 class="h3 font-weight-700 w-100 dis-block mb-4" [translate]="'CAR_RENTAL.TEXT_10'"></h4>
+    <div class="row mb-5" *ngIf="topMakes">
+      <div class="col mb-3" *ngFor="let topmake of topMakes">
+        <a routerLink="{{topmake.assetTypeCode.toLowerCase()}}" *ngIf="topmake.assetTypeCode != 'SUVs'" class="btn btn-default btn-block text-center pt-3 pb-3" [ngSwitch]="topmake.assetTypeCode">
+          <img *ngSwitchCase = "'EcoSedan'" class="h-50px" src="/static/images/web/front-office/car-types/EcoSedan.png" alt="ecosedan" />
+          <img *ngSwitchCase = "'Sedan'" class="h-50px" src="/static/images/web/front-office/landing-pages/car-types/sedan.png" alt="sedan" />
+          <img *ngSwitchCase = "'Van'" class="h-50px" src="/static/images/web/front-office/landing-pages/car-types/van.png" alt="van" />
+          <img *ngSwitchCase = "'Luxury-car'" class="h-50px" src="/static/images/web/front-office/landing-pages/car-types/luxury-car.png" alt="luxury car" />
+          <img *ngSwitchCase = "'Campervan'" class="h-50px" src="/static/images/web/front-office/car-types/Campervan.png" alt="campervan" />
+          <img *ngSwitchCase = "'Antique'" class="h-50px" src="/static/images/web/front-office/car-types/Antique.png" alt="antique" />
+          <img *ngSwitchCase = "'Coupe'" class="h-50px" src="/static/images/web/front-office/landing-pages/car-types/coupe.png" alt="coupe" />
+          <img *ngSwitchCase = "'Fourwheeler'" class="h-50px" src="/static/images/web/front-office/car-types/Fourwheeler.png" alt="fourwheeler" />
+          <img *ngSwitchCase = "'City'" class="h-50px" src="/static/images/web/front-office/car-types/City.png" alt="city" />
+          <img *ngSwitchCase = "'EcoCar'" class="h-50px" src="/static/images/web/front-office/landing-pages/car-types/ecocar.png" alt="ecocar" />
+          <img *ngSwitchDefault class="h-50px" src="/static/images/web/front-office/landing-pages/no-photo-420.jpg" alt="no photo found" />
+          <small class="w-100 dis-block mt-2">{{topmake.assetTypeCode}}</small>
+        </a>
+        <a [routerLink]="['/', 'suv'] | localize" class="btn btn-default btn-block text-center pt-3 pb-3" *ngIf="topmake.assetTypeCode === 'SUVs'">
+          <img class="h-50px" src="/static/images/web/front-office/landing-pages/car-types/suv.png" alt="SUV" />
+          <small class="w-100 dis-block mt-2">{{topmake.assetTypeCode}}</small>
+        </a>
+      </div>
+    </div>
+    <!--------------- How to rent a car ---------------->
+    <h5 class="h3 font-weight-700 w-100 dis-block mb-5 text-center" [translate]="'CAR_RENTAL.TEXT_11'"></h5>
+    <div class="row mb-5 text-center">
+      <div class="col-md-4 col-sm-12 mb-3">
+        <img class="h-75px" src="https://dmprodcdn.blob.core.windows.net/front-office/assets/images/car_delivery.svg" alt="Choose a location" title="Choose a location" />
+        <div class="h6 font-weight-700 w-100 dis-block mt-2" [translate]="'CAR_RENTAL.TEXT_12'"></div>
+        <p class="text-muted" [translate]="'CAR_RENTAL.TEXT_13'"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-3">
+        <img class="h-75px" src="https://dmprodcdn.blob.core.windows.net/front-office/assets/images/website.svg" alt="Book" title="Book" />
+        <div class="h6 font-weight-700 w-100 dis-block mt-2" [translate]="'CAR_RENTAL.TEXT_14'"></div>
+        <p class="text-muted" [translate]="'CAR_RENTAL.TEXT_15'"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-3">
+        <img class="h-75px" src="https://dmprodcdn.blob.core.windows.net/front-office/assets/images/pickup-car.svg" alt="Pick up the car" title="Pick up the car" />
+        <div class="h6 font-weight-700 w-100 dis-block mt-2" [translate]="'CAR_RENTAL.TEXT_16'"></div>
+        <p class="text-muted" [translate]="'CAR_RENTAL.TEXT_17'"></p>
+      </div>
+    </div>
+    <!--------------- Reviews ---------------->
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let review of topReviews">
+        <div class="card">
+          <div class="card-body" *ngIf="review.renter">
+            <div class="media user-media mb-1">
+              <div class="thumb mr-3 h-50px w-50px">
+                <img class="h-50px" src="{{review.renter.profilePicture}}" alt="reviewer pic" />
+              </div>
+              <div class="media-body pt-0">
+                <div class="h5 font-weight-600 w-100 dis-block mb-0">{{review.assetMakeName+' '+review.assetModelName}}</div>
+                <div class="h6 w-100 dis-block text-primary">
+                  <i class="fa fa-star" aria-hidden="true" *ngFor="let star of [].constructor(review.renterReviews.starRating)"></i>
+                </div>
+              </div>
+            </div>
+            <div class="w-100 h-85px dis-inline-block scroll-hidden">{{review.renterReviews.reviewComment}}</div>
+            <div class="w-100 dis-inline-block">
+              <b>{{review.renter.firstName+' '+review.renter.lastName}} </b><br>
+              {{review.renterReviewDate | date : 'medium'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-default btn-lg btn-block h-50px mb-5" (click)="loadMoreReviews()" *ngIf="moreReviews">
+      <span class="h6" [translate]="'CAR_RENTAL.TEXT_19'"></span>
+    </button>
+  </div>
+</div>
+<!--------------- Links ---------------->
+<div class="w-100 dis-inline-block border border-top-light">
+  <div class="container mt-5 mb-5">
+    <div class="h4 font-weight-700 w-100 dis-block mb-4" [translate]="'CAR_RENTAL.TEXT_20'"></div>
+    <div class="row temp-footer-links">
+      <div class="col">
+        <div class="h6 font-weight-700 w-100 dis-block mb-2" [translate]="'CAR_RENTAL.TEXT_21'"></div>
+        <ul class="p-0">
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'bangkok'] | localize" [translate]="'KEYWORDS.TEXT_1'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'nonthaburi'] | localize" [translate]="'KEYWORDS.TEXT_2'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'phitsanulok'] | localize" [translate]="'KEYWORDS.TEXT_3'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'samutprakaran'] | localize" [translate]="'KEYWORDS.TEXT_4'"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="h6 font-weight-700 w-100 dis-block mb-2" [translate]="'CAR_RENTAL.TEXT_22'"></div>
+        <ul class="p-0">
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'phuket'] | localize" [translate]="'KEYWORDS.TEXT_5'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'krabi'] | localize" [translate]="'KEYWORDS.TEXT_6'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'huahin'] | localize" [translate]="'KEYWORDS.TEXT_7'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'nakhon-si-thammarat'] | localize" [translate]="'KEYWORDS.TEXT_8'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'surat-thani'] | localize" [translate]="'KEYWORDS.TEXT_9'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'chumphon'] | localize" [translate]="'KEYWORDS.TEXT_10'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'ranong'] | localize" [translate]="'KEYWORDS.TEXT_11'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'kohsamui'] | localize" [translate]="'KEYWORDS.TEXT_12'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'hatyai'] | localize" [translate]="'KEYWORDS.TEXT_13'"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="h6 font-weight-700 w-100 dis-block mb-2" [translate]="'CAR_RENTAL.TEXT_23'"></div>
+        <ul class="p-0">
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'chiangrai'] | localize" [translate]="'KEYWORDS.TEXT_14'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'chiangmai'] | localize" [translate]="'KEYWORDS.TEXT_15'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'nan'] | localize" [translate]="'KEYWORDS.TEXT_16'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'lampang'] | localize" [translate]="'KEYWORDS.TEXT_17'"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="h6 font-weight-700 w-100 dis-block mb-2" [translate]="'CAR_RENTAL.TEXT_24'"></div>
+        <ul class="p-0">
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'khonkean'] | localize" [translate]="'KEYWORDS.TEXT_18'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'ubon-ratchathani'] | localize" [translate]="'KEYWORDS.TEXT_19'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'udonthani'] | localize" [translate]="'KEYWORDS.TEXT_20'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'sakonnakhon'] | localize" [translate]="'KEYWORDS.TEXT_21'"></a>
+          </li>
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'now'] | localize" [translate]="'KEYWORDS.TEXT_22'"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="h6 font-weight-700 w-100 dis-block mb-2" [translate]="'CAR_RENTAL.TEXT_25'"></div>
+        <ul class="p-0">
+          <li class="no-list-style">
+            <a [routerLink]="['/', 'pattaya'] | localize" [translate]="'KEYWORDS.TEXT_23'"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

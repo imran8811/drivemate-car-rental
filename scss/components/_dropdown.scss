@@ -1,0 +1,14 @@
+.dropdown-menu {
+    box-shadow: $dropdown-box-shadow;
+    padding: $dropdown-padding-x $dropdown-padding-y;
+    .dropdown-item{
+        border-radius: $dropdown-inner-border-radius;
+        color: $gray-650;
+        font-family: "Montserrat-500", Arial, Helvetica, sans-serif;
+        transition: all 0.3s;
+        &:hover{
+            color: $black;
+            background-color: $gray-250;
+        }
+    }
+}
